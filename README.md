@@ -19,11 +19,12 @@ This repository contains the code and data pipeline for the unsupervised discove
 If you find this repository or our methodology useful for your research, please cite our paper:
 
 ```bibtex
-@article{YourName2026,
-    title={},
-    author={},
-    journal={},
-    year={2026}
+@inproceedings{madeira2026intent,
+  title={New Intent Discovery in Peer-Review Critiques: A Morphosyntactic Approach for Interpretable Cluster Labeling},
+  author={Madeira, Caio and Dopke, Luan and Losch, Gustavo and Magnaguagno, Mauricio and Griebler, Dalvan},
+  booktitle={Brazilian Conference on Intelligent Systems},
+  year={2026},
+  organization={Springer}
 }
 ```
 
