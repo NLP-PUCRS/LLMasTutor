@@ -1,0 +1,181 @@
+REGEX USADAS:
+^(?=.*i think).{1,60}$
+removed from train:
+
+I am confused why these are different numbers.	0
+However, my concern is mainly about its importance in practice.	0
+Could you provide a reason for this?	0
+What types of tasks are these?	0
+Some insights might be useful there.	0
+We don't need the same view for all methods.	0
+The improvements vs. TPOT are more relevant.	0
+However, I have significant concerns regarding how the paper is written and final section of the proposed algorithm/experiments etc.	0
+It would be good to clarify this in the text.	0
+How is the PIR drawn exactly?	0
+- I'm not convinced of the approach yet.	0
+(2) I can not follow the inequality (5).	0
+Isn't this of training set loss?	0
+1k or 10k training sets?	0
+I am supposing this is at the test time.	0
+I am not an expert in this area.	0
+Why should this estimator be used?	0
+5, but for some reason this is not made explicit.	0
+Can they be estimated somehow (as a future work)?	0
+What about rubbish class examples?	0
+At which point would it break?	0
+See https://www.youtube.com/watch? v=myGAju4L7O8 for example.	0
+Another concern is that the novelty.	0
+This needs to be better stated here.	0
+What exactly makes them dynamic?	0
+How do you compute them from the input?	0
+It is unclear to me how they are used exactly.	0
+Isn’t coverage of equal importance?	0
+Please discuss this in more depth.	0
+I have three complaints, though.	0
+ It is unclear how they relate.	0
+It’s hard to see the difference.	0
+Are these equivalent objectives in this case?	0
+- How reliable are the interpretations?	0
+It seems like there should be some mention of this.	0
+1. About the latent space for z.	0
+Not clear what is discussed in detail there.	0
+Have the authors considered this issue?	0
+I am not sure I get what you mean.	0
+Are the choices of decoder etc. similar?	0
+Is there a human perceivable difference?	0
+ For the experiments, the following should be addressed.	0
+However, there appear to be a range of issues.	0
+I have a couple questions which somewhat echo questions of other commenters here.	0
+I have a few questions on the motivation and the results.	0
+- The speedup is only measured on CPU.	0
+Also, please refer to point 2 below.	0
+I find this paper not suitable for ICLR.	0
+What size are the input images?	0
+Please comment on the connection and difference.	0
+Could the authors discuss this aspect?	0
+There is too much pre-training.	0
+However, it is not clear from reading the paper where these insights came from.	0
+I guess the answer would be negative.	0
+I am not familiar with the task at hand so I cannot properly judge the quality/accuracy of the results obtained but it seems ok.	0
+Also, the paragraph above Eq.	0
+Please state it more clearly.	0
+There are some papers that could be connected.	0
+"To be honest, I didn't really ""get"" this paper."	0
+- Why did you pick this task?	0
+Because it does not experience it any more.	0
+Did you try anything else?	0
+Unfortunately, this paper does neither.	0
+For example, some deer or truck pictures.	0
+regression tasks. Could you reconsider the sentence?	0
+ And why not use Ms. Packman?	0
+Please state this in the main paper.	0
+Are there any obvious modes?	0
+Are there any obvious modes?	0
+Do you see any connection to inception score?	0
+Do you have any guesses as to why this might be?	0
+SOME OF "2. [SEC], the citation format of ""Bengio et al. (2013)"" should be ""(Bengio et al. 2013)""."	0
+I think some comments would be nice.	0
+Can it solve the halting problem?	0
+But, I think there is not quite enough here.	0
+Thus I think that the paper should be published.	0
+I think there are still some possible problems.	0
+I think this point should be made in the paper.	0
+I think they rather wanted to refer to (9).	0
+Below I detail some parts that I think could be improved.	0
+I think it might be of interest to some audiences in ICLR.	0
+I think there are several points need to be addressed.	0
+But in general, I think they are not quite correct.	0
+Overall, I think this paper is not meeting ICLR novelty standard.	0
+3. The [TECH] setup [TECH] [TECH]: 3a.	0
+This seems a very weird statement to me.	0
+In my view, the paper is out of scope for ICLR.	0
+Overall, I think the current version of the paper is not ready for ICLR conference.	0
+However, I am not convinced that this is novel enough for publication at ICLR.	0
+Therefore, I am not convinced that the paper should be published in ICLR'18.	0
+Given the above reason, I think this paper is not ready to be published in ICLR.	0
+By the way, is this a novel component?	0
+At the current state, I don't think it is good for publishing at ICLR.	0
+As a result, I believe this submission would be of interest to ICLR community.	0
+The contribution for ICLR is rather minimal, unfortunately.	0
+[FIG]: Suggest to make u !	0
+As such the paper would be a nice contribution to ICLR.	0
+It is hard to find positive points that would advocate for a presentation at ICLR.	0
+The novelty in this paper is below what is expected for a publication at ICLR.	0
+"- What is ""gr"" in [SEC]? my main concern is the relevance of this paper to ICLR."	0
+The paper falls far short of the standard expected of an ICLR submission.	0
+My biggest criticism is that MTD seems more like an NLP paper rather than an ICLR paper.	0
+Although point 2 seems novel, I am not convinced that it is significant enough for ICLR.	0
+But I am not sure if the novelty is strong enough for an ICLR paper.	0
++ Significance: - I think the paper contribution is lighter vs. ICLR standard.	0
+There are several reasons not to consider this paper for ICLR at this point.	0
+Also, the citation style does not seem to follow the ICLR style guidelines.	0
+More essential abstraction and [TECH] is needed for a strong ICLR paper.	0
+ICLR 2014 which could be cited to address that reviewer's concern.	0
+The ICLR community at large may not have this domain-specific knowledge.	0
+This is annoying and not at all necessary since ICLR does not have a strict page limit.	0
+ Conclusion  I think this paper would be a very worthy contribution to ICLR.	0
+It is a good [TECH] but not enough for an ICLR paper.	0
+This might change, but in the mean time, what is the benefits for the ICLR community?	0
+That would make it less confusing.	0
+Finally, ICLR does not seem like a good venue for this work.	0
+If this is still enough for ICLR, the paper could be okay.	0
+Is it because the total number of training images drops?	0
+However, the results reported here are not sufficiently significant for ICLR.	0
+However the exposition needs to significantly improve for the paper to be ready for ICLR.	0
+If not, based on these negative results the paper does not seem to quite clear the bar for ICLR.	0
+To summarize, I do not think the contributions of this paper are enough to be published in ICLR.	0
+My major concerns are perhaps the fit of the paper for ICLR as well as the thoroughness of the final experiments.	0
+- considering the lack of page limit at ICLR, making *all* your [TECH] bigger would be beneficial to [TECH].	0
+To be accepted to ICLR, either outstanding performance or truly novel design principles are required.	0
+The paper is too theoretical and does not fit to ICLR. Real impact and real application should be emphasized more.	0
+However, other than relating this line of work to the ICLR community, this [TECH] is not put to any use.	0
+Overall, I believe this is in interesting piece of work and I believe would be of interest to ICLR community.	0
+=Originality= This is an interesting problem that will be novel to most member of the ICLR community.	0
+[SEC] on the richness of natural noise is extremely interesting, but maybe less so to an ICLR audience.	0
+However, I don't find the paper of high significance or the proposed method solid for publication at ICLR.	0
+There just does not seem to be the same level of contribution as I would expect from an ICLR paper.	0
+I think this is a valuable engineering contribution, but I feel that it is not well-suited / sufficient for ICLR audience.	0
+Overall, I don’t think this paper meet ICLR’s novelty standard, although the authors present some good numbers, but they are not convincing.	0
+In case of ICLR, double-blindness is new and not very well described in the call for papers, so I guess it’s up to ACs/PCs to decide.	0
+
+
+---------------------------------------------------------------------
+removed from test.tsv 
+
+ Could you please double check?	0
+In [SEC], ideally epsilon would be briefly described before it appears in a bound.	0
+ Maybe a comparison is in order?	0
+What do you think would happen?	0
+Is this consistent over training time?	0
+Are these numbers on the same test set?	0
+I do not see it defined anywhere.	0
+modified: Pro: * General algorithm Con: * The experiment is a little weak.	0 -> The experiment is a little weak.	0
+These are given by the domain?	0
+Does your model use label information?	0
+But this feels like begging the question.	0
+What should one learn from those?	0
+I have a few major and minor concerns, which I detail below.	0
+In addition to the above point, several technical points below would also be unclear.	0
+Modified: though I have a few questions below that prevent me for now from rating the paper higher. -> The experimental results are encouraging	0
+
+
+---------------------------------------------------------------------
+removed from test.tsv 
+
+For example, it is difficult to discover residual network denovo.	0
+As of now, it is not easy to follow.	0
+Can you please explain?	0
+I might have missed something here.	0
+I don't even understand C2 in introduction.	0
+Is there an explanation for that?	0
+Or, is male, *, blackhair a valid option?	0
+- I am not an expert in this area.	0
+(3) has the wrong sign.	0
+Pros: - Addresses an issue of RWAs.	0
+modified: Novelty of the low-level implementation of the conceptual idea: Pros: The use of Discrete latents versus Gaussian is interesting. The argument for KL balancing appears convincing. Cons: However other innovations are small and not analyzed in detail.	0
+-> Cons: However other innovations are small and not analyzed in detail.	0
+But, this is clearly missing in the paper.	0
+modified: "Summary of the reviews: Pros: •	A Novel Diffusion Convolutional Recurrent Neural Network framework for traffic forecasting •	Apply bidirectional random walks with nice theoretical analysis to capture the spatial dependency •	Novel applications of sequence to sequence architecture and the scheduled sampling technique into modeling the temporal dependency in the traffic domain •	This work is very well written and easy to follow Cons: •	Needs some minor re-organization of contents between the main sections and appendix Detailed comments: D1:  Some minor re-organization of contents between the main sections and the appendix will help the reader reduce cross-section references."	0
+-> Needs some minor re-organization of contents between the main sections and appendix Detailed comments: D1:  Some minor re-organization of contents between the main sections and the appendix will help the reader reduce cross-section references."	0
+Actor with (64,64) hidden units is also not a standard choice, and it would be more interesting to see the results with different number of units, e.g. (128,128) and (256,256).	0
+And there should be a single definition for L_pred.	0

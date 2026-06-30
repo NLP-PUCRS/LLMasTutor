@@ -1,0 +1,15 @@
+easydict
+#faiss==1.7.2
+faiss_gpu
+matplotlib
+nltk
+numpy
+pandas
+scikit_learn
+scipy
+sentence_transformers
+torch
+tqdm
+transformers
+
+

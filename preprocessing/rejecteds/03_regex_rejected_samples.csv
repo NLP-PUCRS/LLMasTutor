@@ -1,0 +1,742 @@
+text,source,original_id,is_actionable,is_noise
+1. [MATH_EXPRESSION],ARIES_Edit,H1l0O6EYDH,1,True
+Better motivation why this is Safe RL -> How to 'safely' obtain a baseline?,ARIES_Edit,M3NDrHEGyyO,1,True
+"I’d like to ask the authors to specify exact neural architectures at least in Appendix. “We also use local features extracted from an intermediate level in the visual convolutional network, that has 8 × 8 spatial locations” -> from which layer did you take the local video embedding that has the size of 8x8?",ARIES_Edit,MDsQkFP1Aw,1,True
+One of my concerns with that approach is that splitting the model into classification and feature extraction heads adds another hyperparameter. How does one decide where the split will be? Readers might want an answer to this question before using this approach.,ARIES_Edit,MWQCPYSJRN,1,True
+"Since all the experiments are only regarding ImageNet -> target datasets, it is unclear how well the method will perform if the source dataset is different (especially if the source dataset is small)",ARIES_Edit,QkRV50TZyP,1,True
+"as mentioned in one question above: while the agent appearance and morphology changes between the experiments, the largest part of the observation, the background, is usually constant across source and target environment --> it would be interesting to see experiments with different background appearances to see the robustness of the method",ARIES_Edit,QubpWYfdNry,1,True
+Why is this not happening in practice ?,ARIES_Edit,b-ny3x071E5,1,True
+[MATH_EXPRESSION] [MATH_EXPRESSION],ARIES_Edit,gI7feJ9yXPz,1,True
+It is not the same task.,ReAct_Labeled,,1,True
+Typoes: Legend of [FIG]: red lines are error -> red lines are accuracy [TAB]: test accuracy -> test error Before 6.2: architecture effects -> architecture affects,ReAct_Labeled,,1,True
+"Yet, this is not discussed in the paper.",ReAct_Labeled,,1,True
+What is LSS in [FIG]?,ReAct_Labeled,,1,True
+"""we use 2 transformation matrixes"" -> if you could please provide more details How is [EQ] related to [FIG]?",ReAct_Labeled,,1,True
+"Minor: “analagous” -> “analogous” The paper runs longer than eight pages, and it is not obvious that the extra space is warranted.",ReAct_Labeled,,1,True
+How is this achieved in practice?,ReAct_Unlabeled,unlbl_stitch_62,1,True
+"* ""The generated bottleneck samples are then used to estimate mutual information"" -> an empirical estimation of I(Z,X) would seem a very high variance estimator; the dimensionality of X is typically large in modern deep-learning problemsdo you have any thoughts on how the learning process fares as this varies?",ReAct_Unlabeled,unlbl_stitch_80,1,True
+"* ""In this experiment, we compare PIBs with ...."" -> I find this whole section hard to read, the description of how the models relate to each other is a little difficult to follow at first sight.",ReAct_Unlabeled,unlbl_stitch_83,1,True
+"* Information dynamics of learning process ([FIG], 6, 7, 8) -> I am curious as to why you did not run the PIB for the same number of epochs as the SFNN?",ReAct_Unlabeled,unlbl_stitch_84,1,True
+Is it because the network is deeper?,ReAct_Unlabeled,unlbl_stitch_163,1,True
+Let's say in a Resnet-34.,ReAct_Unlabeled,unlbl_stitch_197,1,True
+[MATH_EXPRESSION] Please discuss.,ReAct_Unlabeled,unlbl_stitch_458,1,True
+[MATH_EXPRESSION] (9)?,ReAct_Unlabeled,unlbl_stitch_475,1,True
+"For WMT, it improve on DE->EN but not for EN->DE (although it improve both for the author's own baseline).",ReAct_Unlabeled,unlbl_stitch_569,1,True
+The novelty of this paper is limited.,ReAct_Unlabeled,unlbl_stitch_575,1,True
+"All my concerns were adequately addressed, plus improvements were made to better understand the comparison with other work.",ReAct_Unlabeled,unlbl_stitch_701,1,True
+I recommend it be accepted.,ReAct_Unlabeled,unlbl_stitch_772,1,True
+Is this technically still a VAE?,ReAct_Unlabeled,unlbl_stitch_795,1,True
+Might be worth discussing.,ReAct_Unlabeled,unlbl_stitch_796,1,True
+Importance of training data?,ReAct_Unlabeled,unlbl_stitch_884,1,True
+"I am confused by the softmax, as my understanding (from reading the paragraph on the Action Selection Loss on p.5) was that the expression in the softmax here is a scalar (as it is done for every possible action), so this should be a sigmoid to allow for multiple actions to attain a probability of 1? p5: ""See Appendix for details"" -> ""see Appendix C for details"" p5 3.3: Could you elaborate on the heuristic for extracting verb mentions?",ReAct_Unlabeled,unlbl_stitch_927,1,True
+"Is only one verb mention per sentence extracted? p5: ""trained to minimize cross-entropy loss"" -> ""trained to minimize the cross-entropy loss"" p5 3.3: What is the global loss? p6: ""been read (§2.5."" -> ""been read (§2.5)."" p6: ""We encode these vectors using a bidirectional GRU"" – I think you composing a fixed-dimensional vector from the entity vectors?",ReAct_Unlabeled,unlbl_stitch_928,1,True
+"Surely, they did not invent the Hadamard product. p8: ""Our model, in contrast"" use"" -> ""Our model, in contrast, uses"". p8 Related Work: I think it is important to mention that existing architectures such as Memory Netwroks could, in principle, learn to track entities and devote part of their parameters to learn the effect of actions.",ReAct_Unlabeled,unlbl_stitch_930,1,True
+Please be consistent.,ReAct_Unlabeled,unlbl_stitch_1004,1,True
+But this has to be clarified.,ReAct_Unlabeled,unlbl_stitch_1172,1,True
+"(7), P_j^I is not defined.",ReAct_Unlabeled,unlbl_stitch_1215,1,True
+"However, r is not used.",ReAct_Unlabeled,unlbl_stitch_1217,1,True
+Why is this necessary?,ReAct_Unlabeled,unlbl_stitch_1368,1,True
+Is this really worth doing?,ReAct_Unlabeled,unlbl_stitch_1371,1,True
+"This, however, is not the case.",ReAct_Unlabeled,unlbl_stitch_1426,1,True
+It is a bit confusing.,ReAct_Unlabeled,unlbl_stitch_1490,1,True
+[TAB] is not very clear.,ReAct_Unlabeled,unlbl_stitch_1709,1,True
+How to choose lambda?,ReAct_Unlabeled,unlbl_stitch_1762,1,True
+"On top of that, it is not clear how two methods compare computationally and how introduction of the copula  affects the convergence (if it does) Minor comments Page 1: forcing an compact -> forcing a compact “and and” =>and [SEC]: mention that I is mutual information, it is not obvious for everyone [FIG]: circles/triangles are too small, hard to see [FIG]: not really convincing.",ReAct_Unlabeled,unlbl_stitch_1777,1,True
+Clarity: Below average.,ReAct_Unlabeled,unlbl_stitch_1785,1,True
+Is q(t|x) in [FIG] a typo?,ReAct_Unlabeled,unlbl_stitch_1787,1,True
+"In fact it's not clear to me that the fixed classification layer accomplishes anything here, beyond projecting from N -> C (i.e., if N = C, I'd guess it could be removed entirely similar to all convolutional nets, as long as the learned scaling and bias were retained).",ReAct_Unlabeled,unlbl_stitch_1832,1,True
+Is the scale and bias regularized?,ReAct_Unlabeled,unlbl_stitch_1848,1,True
+"Which dataset, model, ….",ReAct_Unlabeled,unlbl_stitch_1865,1,True
+The experiments seem to be inconclusive.,ReAct_Unlabeled,unlbl_stitch_1887,1,True
+"The generalization part relies on not making many non-zero updates, which is not really true in realistic settings (where the data is accessed in multiple passes) [After author response: Yes in the linearly separable case with hinge loss it is quite possible that the number of updates is sublinear. However what I meant here is that with more complicated data and different loss functions it is hard to believe that this can still hold.].",ReAct_Unlabeled,unlbl_stitch_2134,1,True
+"The related work section is also a bit unfair to some of the other generalization results (e.g. Bartlett et al. Neyshabur et al.): those results work on more general network settings, and it's not completely clear that they cannot be related to the algorithm because they rely on certain solution specific quantities (such as spectral/Frobenius norms of the weight matrices) and it could be possible that SGD tends to find a solution with small norm (which can be proved in linear setting and might also be provable for the setting of this paper) [This is addressed in the author response].",ReAct_Unlabeled,unlbl_stitch_2135,1,True
+Lines should be thicker.,ReAct_Unlabeled,unlbl_stitch_2511,1,True
+ I have updated my scores as authors clarified most of my concerns.,ReAct_Unlabeled,unlbl_stitch_2735,1,True
+I find this less elegant.,ReAct_Unlabeled,unlbl_stitch_2789,1,True
+For example: Expressiveness of the models?,ReAct_Unlabeled,unlbl_stitch_2895,1,True
+WHAT IS COMPOSITIONALITY?,ReAct_Unlabeled,unlbl_stitch_2970,1,True
+This is NOT a proper navigation agent.,ReAct_Unlabeled,unlbl_stitch_3116,1,True
+"4, The experiment is weak.",ReAct_Unlabeled,unlbl_stitch_3351,1,True
+"UPDATE: Honestly, outside the scope of SMILES strings, I still have some concerns regarding reasonable validity estimates for prefixes that are significantly shorter than the whole sequence...",ReAct_Unlabeled,unlbl_stitch_3389,1,True
+I question the appropriateness of Eq.,ReAct_Unlabeled,unlbl_stitch_3396,1,True
+This should be explained.,ReAct_Unlabeled,unlbl_stitch_3475,1,True
+This seems quite dubious.,ReAct_Unlabeled,unlbl_stitch_3537,1,True
+- [FIG] is illegible in grayscale.,ReAct_Unlabeled,unlbl_stitch_3555,1,True
+"Update: many of my concerns were adequately addressed, however I still feel that calling this an avenue to ""overcome mode collapse"" is misleading.",ReAct_Unlabeled,unlbl_stitch_3558,1,True
+N and once in i \in 1..,ReAct_Unlabeled,unlbl_stitch_3629,1,True
+What is the heuristic here?,ReAct_Unlabeled,unlbl_stitch_3632,1,True
+The presentation could be improved.,ReAct_Unlabeled,unlbl_stitch_3678,1,True
+Method description is clear.,ReAct_Unlabeled,unlbl_stitch_3683,1,True
+"Minor comments: - 'in order of increasing abstraction', does the order of gender-> smiling or not -> hair color matter?",ReAct_Unlabeled,unlbl_stitch_3820,1,True
+"Comments: -	[SEC], Introduction, 2nd paragraph: ‘peed’ -> ‘speed’(?) -	[EQ]): It would be better to explain why it uses the Gumbel distribution.",ReAct_Unlabeled,unlbl_stitch_3889,1,True
+"-	[SEC], the last paragraph: “[TAB] shows” -> “[FIG] shows” Update 1/11/18: I'm happy with the comments from the authors.",ReAct_Unlabeled,unlbl_stitch_3894,1,True
+In light of this (and of the paper being quite a bit over the page limit)- is this material (4.2->4.4) mostly not better suited for the appendix?,ReAct_Unlabeled,unlbl_stitch_4012,1,True
+"What is ""learning capacity""?",ReAct_Unlabeled,unlbl_stitch_4053,1,True
+Reference for CIFAR-100?,ReAct_Unlabeled,unlbl_stitch_4058,1,True
+However I am willing to adjust my review according to author response and the evaluation of the experiment section by other reviewers (who are hopefully more experienced in this domain).,ReAct_Unlabeled,unlbl_stitch_4108,1,True
+This should be added.,ReAct_Unlabeled,unlbl_stitch_4165,1,True
+[3 paragraph 1] 'Note that these representations do care some' -> carry [3.3.1 last paragraph] 'still able comprehend' --> to  Edit  Updating rating from 6 to 7.,ReAct_Unlabeled,unlbl_stitch_4280,1,True
+They are not equivalent.,ReAct_Unlabeled,unlbl_stitch_4416,1,True
+Minor comments: - [FIG] -> [FIG] in [SEC].,ReAct_Unlabeled,unlbl_stitch_4418,1,True
+The experiments feel lacking.,ReAct_Unlabeled,unlbl_stitch_4502,1,True
+[MATH_EXPRESSION] This seems to mean that we should not expect for q -> p when K increases?,ReAct_Unlabeled,unlbl_stitch_4512,1,True
+Might this be a typo in 4.1?,ReAct_Unlabeled,unlbl_stitch_4525,1,True
+"Minor comments: - [SEC], first paragraph, last sentence, ""that"" -> ""than""?",ReAct_Unlabeled,unlbl_stitch_4528,1,True
+Did you investigate this?,ReAct_Unlabeled,unlbl_stitch_4762,1,True
+RE: Consistency My concerns regarding consistency remain.,ReAct_Unlabeled,unlbl_stitch_4836,1,True
+The paper is not self-contained.,ReAct_Unlabeled,unlbl_stitch_4897,1,True
+"A couple examples from [SEC]: - “If the discriminator is very powerful and learns to accurately classify all samples, then the problem of the generator amounts to solving the Jensen-Shannon divergence between the true distribution and the generators distribution.” -> It would be clearer to say “minimizing” (rather than “solving”) the JS divergence.",ReAct_Unlabeled,unlbl_stitch_4967,1,True
+"(“Solving” sounds more like what the discriminator does.) - “Wasserstein GANs (WGANs) Arjovsky et al. (2017), where the discriminator rather than being treated as a classifier is instead trying to simulate the Wasserstein−1 or earth-mover metric” -> Instead of “simulate”, “estimate” or “approximate” would be better word choices.",ReAct_Unlabeled,unlbl_stitch_4968,1,True
+Please add citations.,ReAct_Unlabeled,unlbl_stitch_4973,1,True
+How is this issue resolved?,ReAct_Unlabeled,unlbl_stitch_5044,1,True
+"However, it is included for completeness.",ReAct_Unlabeled,unlbl_stitch_5246,1,True
+This is incorrect; u=v=4 in the figure.,ReAct_Unlabeled,unlbl_stitch_5268,1,True
+- The template seems off.,ReAct_Unlabeled,unlbl_stitch_5288,1,True
+- The title seems misleading.,ReAct_Unlabeled,unlbl_stitch_5290,1,True
+This is not generally true for GANs.,ReAct_Unlabeled,unlbl_stitch_5436,1,True
+"[MATH_EXPRESSION] id=B1QRgziT (Spectral Regularization for GANs) EDIT: As discussed below, I have slightly raised my score.",ReAct_Unlabeled,unlbl_stitch_5460,1,True
+"Given these clarifications in an author response, I would be willing to increase the score.",ReAct_Unlabeled,unlbl_stitch_5515,1,True
+Is this an interesting case?,ReAct_Unlabeled,unlbl_stitch_5733,1,True
+I disagree with this claim.,ReAct_Unlabeled,unlbl_stitch_5753,1,True
+I don’t understand H -> 2H epsilon.,ReAct_Unlabeled,unlbl_stitch_5774,1,True
+This is not an accurate portrayal.,ReAct_Unlabeled,unlbl_stitch_5858,1,True
+What are the runtimes?,ReAct_Unlabeled,unlbl_stitch_5874,1,True
+This connection is a bit vague.,ReAct_Unlabeled,unlbl_stitch_5916,1,True
+- p.4 “Please the Appendix” -> “Please see the Appendix” - p.5 (Fig.,ReAct_Unlabeled,unlbl_stitch_6054,1,True
+Is a video of the results available?,ReAct_Unlabeled,unlbl_stitch_6068,1,True
+"Cons  None Typos  1. [SEC], paragraph 3 : ""is given in [FIG]"" -> ""is given in Algorithm 1"" Note  Since I'm not familiar with the differential privacy literature, I'm flexible with my evaluation based on what other reviewers with more expertise have to say.",ReAct_Unlabeled,unlbl_stitch_6264,1,True
+Is this guaranteed to be Gaussian?,ReAct_Unlabeled,unlbl_stitch_6469,1,True
+Originality: The originality is weak.,ReAct_Unlabeled,unlbl_stitch_6507,1,True
+Another reset episode?,ReAct_Unlabeled,unlbl_stitch_6566,1,True
+"Minor Comments Abstract: ""Our framework generalizes significantly better"" I think it would be good to already mention in comparison to what this statement is. p1: ""aim to solve tasks such as learn mathematical"" -> ""aim to solve tasks such as learning mathematical"" p2: You could add a citation for Theano, Tensorflow and Mxnet. p2: Could you elaborate how equation completion is used in Mathematical Q&A? p3: Could you expand on ""mathematical equation verification and completion […] has broader applicability"" by maybe giving some concrete examples. p3 Eq.",ReAct_Unlabeled,unlbl_stitch_6699,1,True
+"Two digits? p3: ""division because that they can"" -> ""division because they can"" p4 [FIG]: Is there a reason 1 is represented as 10^0 here?",ReAct_Unlabeled,unlbl_stitch_6701,1,True
+"Do you need the distinction between 1 (the integer) and 1.0 (the float)? p5: ""we include set of changes"" -> ""we include the set of changes"" p5: In my view there is enough space to move appendix A to section 2. In addition, it would be great to see more examples of generated identities at this stage (including negative ones). p5: ""We generate all possible equations (with high probability)"" – what is probabilistic about this? p5: I don't understand why function evaluation results in identities of depth 2 and 3. Is it both or one of them? p6: The modules ""symbol"" and ""number"" are not shown in the figure.",ReAct_Unlabeled,unlbl_stitch_6702,1,True
+"I assume they refer to projections using Wsymb and Wnum? p6: ""tree structures neural networks"" -> ""tree structured neural networks"" p6: A reference for the ADAM optimizer should be added. p6: Which method was used for optimizing these hyperparameters?",ReAct_Unlabeled,unlbl_stitch_6703,1,True
+"If so, is this scalable?",ReAct_Unlabeled,unlbl_stitch_6761,1,True
+Theoretical contributions: None.,ReAct_Unlabeled,unlbl_stitch_6889,1,True
+What does it stand for?,ReAct_Unlabeled,unlbl_stitch_6929,1,True
+I want to know more...,ReAct_Unlabeled,unlbl_stitch_6965,1,True
+This may be explained in [SEC].,ReAct_Unlabeled,unlbl_stitch_6996,1,True
+The paragraph below Eq.,ReAct_Unlabeled,unlbl_stitch_7023,1,True
+This should be further discussed.,ReAct_Unlabeled,unlbl_stitch_7164,1,True
+What is the underlying phenomenon?,ReAct_Unlabeled,unlbl_stitch_7187,1,True
+[FIG]:  curve legend?,ReAct_Unlabeled,unlbl_stitch_7211,1,True
+Below I'll discuss my concerns with the experiments and description of the results.,ReAct_Unlabeled,unlbl_stitch_7398,1,True
+What is the motivation for doing this?,ReAct_Unlabeled,unlbl_stitch_7436,1,True
+I feel the motivation for this is lacking.,ReAct_Unlabeled,unlbl_stitch_7454,1,True
+I would be surprise if it is.,ReAct_Unlabeled,unlbl_stitch_7535,1,True
+########## UPDATED AFTER AUTHOR RESPONSE ########## Thanks for the good revision and response that addressed most of my concerns.,ReAct_Unlabeled,unlbl_stitch_7642,1,True
+"My concerns are mostly regarding the empirical studies: 1. One of my main concern is on the empirical results in Table 1. The disentanglement metric score for beta-VAE is suspiciously lower than what’s reported in Higgins et al., where they reported a 99.23% disentanglement metric score on 2D shape dataset.",ReAct_Unlabeled,unlbl_stitch_7657,1,True
+Is my understanding correct?,ReAct_Unlabeled,unlbl_stitch_7665,1,True
+Is this more of a simplifying assumption?,ReAct_Unlabeled,unlbl_stitch_7685,1,True
+What is a powerful model?,ReAct_Unlabeled,unlbl_stitch_7708,1,True
+What is a powerful algorithm?,ReAct_Unlabeled,unlbl_stitch_7709,1,True
+I did not check the mathematics.,ReAct_Unlabeled,unlbl_stitch_7757,1,True
+"EDIT: I read the author's rebuttal, but it has not completely addressed my concerns, so my rating has not changed.",ReAct_Unlabeled,unlbl_stitch_7778,1,True
+- Male -> Bald does not make much sense causally (it should be Gender -> Baldness)...,ReAct_Unlabeled,unlbl_stitch_7800,1,True
+"Make this consistent, please.",ReAct_Unlabeled,unlbl_stitch_7802,1,True
+- Many subscripts are used without explanation. r -> real? g -> generating?,ReAct_Unlabeled,unlbl_stitch_7822,1,True
+"- ""proposition from Goodfellow"" -> please be more precise - What is [FIG] used for?",ReAct_Unlabeled,unlbl_stitch_7844,1,True
+Was this a hyperparameter?,ReAct_Unlabeled,unlbl_stitch_7879,1,True
+"Intro, first line: its -> their.",ReAct_Unlabeled,unlbl_stitch_8129,1,True
+"SIGIR-09 Pros: 1. An interesting RL formulation for query reformulation Cons: 1. The use of RL is not properly justified 2. The empirical result is not convincing that the proposed method is indeed advantageous  After reading the author response and checking the revised paper, I'm both delighted and surprised that the authors improved the submission substantially and presented stronger results.",ReAct_Unlabeled,unlbl_stitch_8457,1,True
+4. [FIG] is not necessary.,ReAct_Unlabeled,unlbl_stitch_8483,1,True
+"Minor comments: 1. In Lemma 1 (4), w^T(t)->w(t)^T 2. In the proof of Lemma 1, it’s better to use vector 0 for the gradient L(w) 3. In Theorem 4, the authors should specify eta 4. In appendix A, page 11, beta is double used 5. In appendix D, equation (D.5) has an extra period This paper examines a distributed Deep RL system in which experiences, rather than gradients, are shared between the parallel workers and the centralized learner.",ReAct_Unlabeled,unlbl_stitch_8569,1,True
+And how to achieve that?,ReAct_Unlabeled,unlbl_stitch_8805,1,True
+I do not see a comparison.,ReAct_Unlabeled,unlbl_stitch_8836,1,True
+Is this what you mean?,ReAct_Unlabeled,unlbl_stitch_8923,1,True
+"-> It seems that the choice of the word uninformative would be misleading: an uninformative discrimination would be a discrimination that completely fails, while what the condition is saying it that it cannot perform perfect discrimination.",ReAct_Unlabeled,unlbl_stitch_8931,1,True
+"In the appendix: 3rd line of proof of prop 1: I don' understand ""countably infinite finite sequences of vectors lying in the vertices of the simplex"" -> what is countable infinite here?",ReAct_Unlabeled,unlbl_stitch_8961,1,True
+Is progress guaranteed?,ReAct_Unlabeled,unlbl_stitch_8995,1,True
+How large should it be?,ReAct_Unlabeled,unlbl_stitch_9159,1,True
+  Update after rebuttal: Thanks for the revised version and answering my concerns.,ReAct_Unlabeled,unlbl_stitch_9179,1,True
+This needs more clarification.,ReAct_Unlabeled,unlbl_stitch_9226,1,True
+Please check the literature.,ReAct_Unlabeled,unlbl_stitch_9386,1,True
+This statement seems problematic.,ReAct_Unlabeled,unlbl_stitch_9473,1,True
+The same regarding the rewards.,ReAct_Unlabeled,unlbl_stitch_9599,1,True
+This is not really true.,ReAct_Unlabeled,unlbl_stitch_9778,1,True
+-> Representation is not updated during exploration - The performance of any algorithm (except FI) in the Arm-Arrow task is really bad but without comment.,ReAct_Unlabeled,unlbl_stitch_9787,1,True
+"Not critical, but either cite one the original papers or maybe remove the cite altogether p4 par-2: has multiple interests...: interests -> purposes? p4 par-1: Outcome Space to the agent is is ...",ReAct_Unlabeled,unlbl_stitch_9807,1,True
+"[SEC] par1: are rapidly mentioned... -> briefly [SEC] ...Outcome Space O, we can rewrite the architecture as: and then comes the algorithm.",ReAct_Unlabeled,unlbl_stitch_9808,1,True
+This is a bit weird [SEC]: par1: experimental campaign -> experiments? p7: Context Space: the object was reset to a random position or always to the same position?,ReAct_Unlabeled,unlbl_stitch_9809,1,True
+Footnote 14: superior to -> larger than p8 par2: Exploration Ratio Ratio_expl... probably also want to add (ER) as it is later used [SEC]: slightly underneath -> slightly below p9 par1: unfinished sentence: It is worth noting that the.... one sentence later: RP architecture?,ReAct_Unlabeled,unlbl_stitch_9810,1,True
+Will it always converge?,ReAct_Unlabeled,unlbl_stitch_9844,1,True
+What’s its objective?,ReAct_Unlabeled,unlbl_stitch_9845,1,True
+Thus it is not a novel contribution.,ReAct_Unlabeled,unlbl_stitch_9903,1,True
+I would vote for rejection.,ReAct_Unlabeled,unlbl_stitch_9943,1,True
+I want to thank the author for actively participating in the discussions and in clarifying already many of the details that I was missing.,ReAct_Unlabeled,unlbl_stitch_10009,1,True
++ This is more of a suggestion.,ReAct_Unlabeled,unlbl_stitch_10140,1,True
+This should be improved.,ReAct_Unlabeled,unlbl_stitch_10152,1,True
+This needs to be clarified.,ReAct_Unlabeled,unlbl_stitch_10251,1,True
+"In (3), R is not defined.",ReAct_Unlabeled,unlbl_stitch_10329,1,True
+This should be clarified in the paper.,ReAct_Unlabeled,unlbl_stitch_10382,1,True
+This section should be rebalanced.,ReAct_Unlabeled,unlbl_stitch_10511,1,True
+Is there a particular reason for this?,ReAct_Unlabeled,unlbl_stitch_10561,1,True
+"The paper, however, is not flawless.",ReAct_Unlabeled,unlbl_stitch_10574,1,True
+Minor: Penultimate paragraph of the introduction section: “get get” -> get First paragraph of the experiments section: ”so that so that” -> so that This paper attacks an important problems with an interesting and promising methodology.,ReAct_Unlabeled,unlbl_stitch_10610,1,True
+This should be fixed.,ReAct_Unlabeled,unlbl_stitch_10737,1,True
+"Please see my detailed comments in the ""official comment"" The extensive revisions addressed most of my concerns Quality ====== The idea is interesting, the theory is hand-wavy at best (ADDRESSED but still a bit vague), the experiments show that it works but don't evaluate many interesting/relevant aspects (ADDRESSED).",ReAct_Unlabeled,unlbl_stitch_10780,1,True
+"Revised review: Given the authors' thorough answers to my concerns, I have decided to change my score.",ReAct_Unlabeled,unlbl_stitch_10850,1,True
+I believe this is just a typo.,ReAct_Unlabeled,unlbl_stitch_10963,1,True
+This should be better motivated.,ReAct_Unlabeled,unlbl_stitch_10980,1,True
+"I have no additional remarks for 4) -> 9), since everything is fixed in the new version of the paper.",ReAct_Unlabeled,unlbl_stitch_10998,1,True
+Any explanation for that?,ReAct_Unlabeled,unlbl_stitch_11054,1,True
+* The Bibliography needs to be checked.,ReAct_Unlabeled,unlbl_stitch_11092,1,True
+ Minor errors:  [5.1 end of paragraph 2] 'that accuracy and RSME and not' -> 'that accuracy and RSME are not' [[FIG] caption] 'The initial scores are lack' -> 'The initial scores lack' This paper proposed a new approach for counting in VQA called Interpretable Counting in Visual Question Answering.,ReAct_Unlabeled,unlbl_stitch_11182,1,True
+The omission is conspicuous.,ReAct_Unlabeled,unlbl_stitch_11243,1,True
+The differences and similarities and mentioned.,ReAct_Unlabeled,unlbl_stitch_11367,1,True
+Overall I am weakly inclined to accept this paper.,ReAct_Unlabeled,unlbl_stitch_11570,1,True
+"Overall, I would say this is somewhat borderline, but I could be convinced to argue for acceptance based on the other reviews and the author response.",ReAct_Unlabeled,unlbl_stitch_11634,1,True
+Is this a general pattern?,ReAct_Unlabeled,unlbl_stitch_11690,1,True
+"But in this case, it is not.",ReAct_Unlabeled,unlbl_stitch_11741,1,True
+"Detailed feedback: ""deployed in at test-time on environments"" -> ""deployed at test time in environments""?",ReAct_Unlabeled,unlbl_stitch_11749,1,True
+"""which can effectively recover disentangle the goals"" -> ""which can effectively disentangle the goals""?",ReAct_Unlabeled,unlbl_stitch_11750,1,True
+"""also consider learning cost function with"" -> ""also consider learning cost functions with""?",ReAct_Unlabeled,unlbl_stitch_11753,1,True
+"""o learn nonlinear cost function have"" -> ""o learn nonlinear cost functions have"".",ReAct_Unlabeled,unlbl_stitch_11754,1,True
+""" are not robust the environment changes"" -> "" are not robust to environment changes""?",ReAct_Unlabeled,unlbl_stitch_11755,1,True
+Please state the theorem.,ReAct_Unlabeled,unlbl_stitch_11757,1,True
+"""must reach to goal"" -> ""must reach the goal""?",ReAct_Unlabeled,unlbl_stitch_11764,1,True
+"Other minor comments / typos: (1) 7th line of [SEC] page 2, ‘a unstructured data’ -> ‘unstructured data’ (2) 5th line on page 3, remove ‘compare [EQ])’ (or rephrase it appropriately).",ReAct_Unlabeled,unlbl_stitch_11837,1,True
+(5) [EQ] is confusing.,ReAct_Unlabeled,unlbl_stitch_11841,1,True
+Please be more precise.,ReAct_Unlabeled,unlbl_stitch_11860,1,True
+"However, it did not cite it.",ReAct_Unlabeled,unlbl_stitch_11921,1,True
+"- “abruplty” -> “abruptly” on page 5, 2nd paragraph ### References [Pascanu 2013] Pascanu, Razvan, Tomas Mikolov, and Yoshua Bengio.",ReAct_Unlabeled,unlbl_stitch_12052,1,True
+I think this is not precise.,ReAct_Unlabeled,unlbl_stitch_12209,1,True
+More experimentation is needed.,ReAct_Unlabeled,unlbl_stitch_12399,1,True
+Is your [EQ] correct?,ReAct_Unlabeled,unlbl_stitch_12420,1,True
+"I only have some minor corrections: 1) [SEC]: typo ""is is"" 2) [SEC]: typo ""esstentiallybe"" 3) [SEC]: (F+lambda I) --> should be inverse 4) The authors should include a proper conclusion The paper proposes a novel way for trading of exploration and exploitation in model-free reinforcement learning.",ReAct_Unlabeled,unlbl_stitch_12579,1,True
+"Detailed comments: ""Where γ is"" -> "", <newline> where γ is"".",ReAct_Unlabeled,unlbl_stitch_12618,1,True
+"""The other alternative"" -> ""The alternative""?",ReAct_Unlabeled,unlbl_stitch_12619,1,True
+"""new states may"" -> ""new states, may"".",ReAct_Unlabeled,unlbl_stitch_12623,1,True
+"""they still fails"" -> ""they still fail"".",ReAct_Unlabeled,unlbl_stitch_12625,1,True
+""" exploration bonus(Little & Sommer, 2014)"" -> "" exploration bonus (Little & Sommer, 2014)"".",ReAct_Unlabeled,unlbl_stitch_12628,1,True
+"[MATH_EXPRESSION] ""So after visited n times"" -> ""So after being visited n times"".",ReAct_Unlabeled,unlbl_stitch_12632,1,True
+"""t utilize counters, can"" -> ""t utilize counters can"".",ReAct_Unlabeled,unlbl_stitch_12634,1,True
+Some description is needed.,ReAct_Unlabeled,unlbl_stitch_12637,1,True
+""" models(Bellemare"" -> "" models (Bellemare"".",ReAct_Unlabeled,unlbl_stitch_12643,1,True
+"(I'm skeptical that it represents the first use of this problem, but I can't check it.) ""Softmax exploration fail"" -> ""Softmax exploration fails"".",ReAct_Unlabeled,unlbl_stitch_12645,1,True
+"""whom also analyzed"" -> ""who also analyzed"".",ReAct_Unlabeled,unlbl_stitch_12646,1,True
+"""non-Markovity"" -> ""non-Markovianness""?",ReAct_Unlabeled,unlbl_stitch_12647,1,True
+"More precisely, focusing on the comparison to Rainbow which is the main competitor here, my concerns are the following: - There is almost no discussion on the differences between Reactor and Rainbow (actually the paper lacks a « related work » section).",ReAct_Unlabeled,unlbl_stitch_12656,1,True
+- Rainbow is not distributed.,ReAct_Unlabeled,unlbl_stitch_12658,1,True
+[MATH_EXPRESSION] [MATH_EXPRESSION] This is confusing.,ReAct_Unlabeled,unlbl_stitch_12671,1,True
+This is properly acknowledged in the paper.,ReAct_Unlabeled,unlbl_stitch_12726,1,True
+What is the factor of augmentation?,ReAct_Unlabeled,unlbl_stitch_12800,1,True
+How much translation?,ReAct_Unlabeled,unlbl_stitch_12801,1,True
+What is the order of [FIG]?,ReAct_Unlabeled,unlbl_stitch_12853,1,True
+What is the value of r?,ReAct_Unlabeled,unlbl_stitch_12906,1,True
+This is not a major concern.,ReAct_Unlabeled,unlbl_stitch_12914,1,True
+(There are some typos  (preform --> perform )) This paper draws an interesting connection between deep neural networks and theories of quantum entanglement.,ReAct_Unlabeled,unlbl_stitch_12944,1,True
+"For example, what is r?",ReAct_Unlabeled,unlbl_stitch_12958,1,True
+The paper is hard to evaluate.,ReAct_Unlabeled,unlbl_stitch_13005,1,True
+Not a realistic setting.,ReAct_Unlabeled,unlbl_stitch_13151,1,True
+"- Why ""softsign"" and not tanh?",ReAct_Unlabeled,unlbl_stitch_13235,1,True
+This statement here is not rigorous.,ReAct_Unlabeled,unlbl_stitch_13360,1,True
+"The authors have also addressed my concerns on variance reduction, although it's still mysterious to me that the density ratio estimation method seems to work very well even at the begining stage.",ReAct_Unlabeled,unlbl_stitch_13423,1,True
+8? the intuition behind it?,ReAct_Unlabeled,unlbl_stitch_13452,1,True
+  Comments after the rebuttal and revision : I'd like thanks the authors for the revision and their answers.,ReAct_Unlabeled,unlbl_stitch_13460,1,True
+This seems very drastic!,ReAct_Unlabeled,unlbl_stitch_13561,1,True
+This is not convincing.,ReAct_Unlabeled,unlbl_stitch_13611,1,True
+Why is this term included.,ReAct_Unlabeled,unlbl_stitch_13646,1,True
+Is this term not equal to 0?,ReAct_Unlabeled,unlbl_stitch_13647,1,True
+"However, the paper is not flawless.",ReAct_Unlabeled,unlbl_stitch_13673,1,True
+The comparison is not fair enough.,ReAct_Unlabeled,unlbl_stitch_13678,1,True
+"* Last paragraph of [SEC], ""strong bound"" -> ""tight bound"" * Last paragraph of [SEC], citation missing for DVI The authors analyze the bias and variance of the IWAE bound from Burda et al. (2015), and with explicit formulas up to vanishing polynomial terms and intractable moments.",ReAct_Unlabeled,unlbl_stitch_13703,1,True
+Just want to confirm this.,ReAct_Unlabeled,unlbl_stitch_13747,1,True
+"[MATH_EXPRESSION] -> ""recent studies"", ""several studies"", etc.",ReAct_Unlabeled,unlbl_stitch_13792,1,True
+So the novelty is limited.,ReAct_Unlabeled,unlbl_stitch_13888,1,True
+Is the generalization hurt?,ReAct_Unlabeled,unlbl_stitch_14047,1,True
+- Writing seems to be rushed.,ReAct_Unlabeled,unlbl_stitch_14067,1,True
+This should probably be noted.,ReAct_Unlabeled,unlbl_stitch_14088,1,True
+It would be nice to expand this.,ReAct_Unlabeled,unlbl_stitch_14166,1,True
+WAE is a bit oversold.,ReAct_Unlabeled,unlbl_stitch_14191,1,True
+"* Page 2, 2.1, line 2, typo: “stanrdard” -> “standard” Post-rebuttal revision: After reading the authors' response to my review, I decided to increase the score by 2 points.",ReAct_Unlabeled,unlbl_stitch_14362,1,True
+This is insinuated but not stated.,ReAct_Unlabeled,unlbl_stitch_14418,1,True
+- Why does performance suffer compared to TRIPLE on the SYN->SVHN task?,ReAct_Unlabeled,unlbl_stitch_14507,1,True
+Significance: Hard to say.,ReAct_Unlabeled,unlbl_stitch_14671,1,True
+"My concerns are as follows: 1) Seems like that the given trajectories are naturally divided with different tasks, i.e., a single trajectory consists only a single task.",ReAct_Unlabeled,unlbl_stitch_14694,1,True
+"I guess not, but this is ambiguous.",ReAct_Unlabeled,unlbl_stitch_15035,1,True
+What exactly is not commutative?,ReAct_Unlabeled,unlbl_stitch_15054,1,True
+Is it 5 in all of them ?,ReAct_Unlabeled,unlbl_stitch_15058,1,True
+This could be clearer.,ReAct_Unlabeled,unlbl_stitch_15101,1,True
+"* ""Furthermore, CGANs and CVAEs suffer from the same problems of mode-collapse and blurriness as their unconditional cousins"" -> this is debateable, there are many papers which employ various methods to (attempt to) alleviate this issue.",ReAct_Unlabeled,unlbl_stitch_15154,1,True
+Thus the novelty is limited.,ReAct_Unlabeled,unlbl_stitch_15168,1,True
+Will it converge faster?,ReAct_Unlabeled,unlbl_stitch_15201,1,True
+- What is the DAN architecture?,ReAct_Unlabeled,unlbl_stitch_15374,1,True
+This is still subject of discussion.,ReAct_Unlabeled,unlbl_stitch_15392,1,True
+This is somewhat unrealistic.,ReAct_Unlabeled,unlbl_stitch_15411,1,True
+This should be considered.,ReAct_Unlabeled,unlbl_stitch_15493,1,True
+This point should be discussed.,ReAct_Unlabeled,unlbl_stitch_15538,1,True
+- The format is inconsistent.,ReAct_Unlabeled,unlbl_stitch_15665,1,True
+Probably the figures?,ReAct_Unlabeled,unlbl_stitch_15668,1,True
+The subfigures are not labeled.,ReAct_Unlabeled,unlbl_stitch_15686,1,True
+Is it because of the residual connection?,ReAct_Unlabeled,unlbl_stitch_15748,1,True
+1. The title is misleading.,ReAct_Unlabeled,unlbl_stitch_15799,1,True
+- Lacking technical novelty.,ReAct_Unlabeled,unlbl_stitch_15872,1,True
+"Unfortunately, this was not done.",ReAct_Unlabeled,unlbl_stitch_15883,1,True
+This does not seem consistent?,ReAct_Unlabeled,unlbl_stitch_15941,1,True
+"[MATH_EXPRESSION] Specific comments: page 1: - hasn't -> has not. page 2: - ""activation function"": at this stage s_e and s_d are just functions.",ReAct_Unlabeled,unlbl_stitch_15984,1,True
+"What is the ""activation"" refers to?",ReAct_Unlabeled,unlbl_stitch_15985,1,True
+"- ""two class""->two classes - Definition 1: again what is a precise definition of activation function?",ReAct_Unlabeled,unlbl_stitch_15993,1,True
+"- ""if the rows of the weight matrix is""-> if the rows of the weight matrix are page 4: - Proposition 1 could be stated as a theorem and Th.1 as a corollary (with e=0).",ReAct_Unlabeled,unlbl_stitch_15998,1,True
+[MATH_EXPRESSION] Is this just x->x_+ ?,ReAct_Unlabeled,unlbl_stitch_16000,1,True
+This should be discussed.,ReAct_Unlabeled,unlbl_stitch_16003,1,True
+"[MATH_EXPRESSION] Can the author comment on that? page 8: - ""the recovery is denoised through thresholding"": where is this step analyzed? page 9: - [FIG]: sparseness-> sparsity; also what is the activation function used here?",ReAct_Unlabeled,unlbl_stitch_16005,1,True
+No explanation is provided.,ReAct_Unlabeled,unlbl_stitch_16071,1,True
+Explanation is needed.,ReAct_Unlabeled,unlbl_stitch_16189,1,True
+The contribution of the paper is not clear.,ReAct_Unlabeled,unlbl_stitch_16336,1,True
+It contains a few errors.,ReAct_Unlabeled,unlbl_stitch_16446,1,True
+Please make this rigorous.,ReAct_Unlabeled,unlbl_stitch_16489,1,True
+[FIG] is difficult to read.,ReAct_Unlabeled,unlbl_stitch_16558,1,True
+Clarity: Clarity is poor.,ReAct_Unlabeled,unlbl_stitch_16580,1,True
+Is the latter a proxy for the former?,ReAct_Unlabeled,unlbl_stitch_16749,1,True
+Is this worth talking about?,ReAct_Unlabeled,unlbl_stitch_16835,1,True
+The notation is a little uneven.,ReAct_Unlabeled,unlbl_stitch_16889,1,True
+The experimental setup is not convincing.,ReAct_Unlabeled,unlbl_stitch_16920,1,True
+It feels to premature for publication.,ReAct_Unlabeled,unlbl_stitch_16930,1,True
+What does it represent?,ReAct_Unlabeled,unlbl_stitch_16952,1,True
+"Small comments  There is a typo in [FIG] -- ""Howerver"" should be ""However""  Update after author response  Thanks to the authors for their responses.",ReAct_Unlabeled,unlbl_stitch_17109,1,True
+"Here are my concerns: 1) As the price shows a high skewness in [FIG], it may make more sense to use relative difference instead of absolute difference of predicted and actual auction price in evaluating/training each model.",ReAct_Unlabeled,unlbl_stitch_17165,1,True
+This is important to specify.,ReAct_Unlabeled,unlbl_stitch_17179,1,True
+Is this a valid point to raise?,ReAct_Unlabeled,unlbl_stitch_17271,1,True
+This is very suspicious.,ReAct_Unlabeled,unlbl_stitch_17292,1,True
+And the S_w even better?,ReAct_Unlabeled,unlbl_stitch_17382,1,True
+It is not explicitly stated.,ReAct_Unlabeled,unlbl_stitch_17452,1,True
+The technical description is unclear.,ReAct_Unlabeled,unlbl_stitch_17559,1,True
+It is very hard to follow!,ReAct_Unlabeled,unlbl_stitch_17587,1,True
+This argument is questionable.,ReAct_Unlabeled,unlbl_stitch_17652,1,True
+- The reference of ESIM is not correct.,ReAct_Unlabeled,unlbl_stitch_17800,1,True
+- [FIG] is hard to understand.,ReAct_Unlabeled,unlbl_stitch_17801,1,True
+\Sigma is not defined.,ReAct_Unlabeled,unlbl_stitch_17808,1,True
+Did authors try this?,ReAct_Unlabeled,unlbl_stitch_17896,1,True
+- The experimental evidence is insufficient.,ReAct_Unlabeled,unlbl_stitch_17911,1,True
+- Runtimes are absent.,ReAct_Unlabeled,unlbl_stitch_17922,1,True
+I was not convinced it is.,ReAct_Unlabeled,unlbl_stitch_17948,1,True
+"The authors have addressed a number of my concerns, but there are a few outstanding concerns.",ReAct_Unlabeled,unlbl_stitch_17999,1,True
+"I believe a substantially revised version of the paper could address most of my concerns; still, I find the current version too preliminary for publication.",ReAct_Unlabeled,unlbl_stitch_18006,1,True
+Update:  I'm happy with how the authors have addressed these and other comments in revision 2 of the paper and I've bumped the rating from 6 to 7.,ReAct_Unlabeled,unlbl_stitch_18237,1,True
+Need some explanations.,ReAct_Unlabeled,unlbl_stitch_18248,1,True
+Would this affect the distributions?,ReAct_Unlabeled,unlbl_stitch_18446,1,True
+Why was this mentioned?,ReAct_Unlabeled,unlbl_stitch_18449,1,True
+And it doesn't seem to be comparable.,ReAct_Unlabeled,unlbl_stitch_18450,1,True
+The manuscript is not well written.,ReAct_Unlabeled,unlbl_stitch_18464,1,True
+"[MATH_EXPRESSION] - page 6: “on the last full precision network”: should probably be “on the last full precision layer” “ distributions has” ->  “ distributions have” This paper introduces the LR-Net, which uses the reparametrization trick inspired by a similar component in VAE.",ReAct_Unlabeled,unlbl_stitch_18515,1,True
+This does not seem to be reasonable.,ReAct_Unlabeled,unlbl_stitch_18631,1,True
+- It looks like it is not finished.,ReAct_Unlabeled,unlbl_stitch_18636,1,True
+- the results are not remarkable.,ReAct_Unlabeled,unlbl_stitch_18641,1,True
+Why not adopt it in CrescendoNet?,ReAct_Unlabeled,unlbl_stitch_18767,1,True
+- The paper is not coherent.,ReAct_Unlabeled,unlbl_stitch_18918,1,True
+Why is this a reasonable modification?,ReAct_Unlabeled,unlbl_stitch_18932,1,True
+This should be clarified.,ReAct_Unlabeled,unlbl_stitch_18960,1,True
+What is essential in this figure?,ReAct_Unlabeled,unlbl_stitch_18968,1,True
+A single phase transition?,ReAct_Unlabeled,unlbl_stitch_18969,1,True
+I simply do not see this.,ReAct_Unlabeled,unlbl_stitch_19007,1,True
+"The revised paper includes many of the additional references that I suggested, and the author response clarified my confusion over the Charades experiments; their results are indeed close to state-of-the-art on Charades activity localization (slightly outperformed by [6]), which I had mistakenly confused with activity classification (from [5]).",ReAct_Unlabeled,unlbl_stitch_19110,1,True
+I will happily upgrade my rating of the paper if the authors can address my concerns over prior work in the experiments.,ReAct_Unlabeled,unlbl_stitch_19128,1,True
+Perhaps not that much?,ReAct_Unlabeled,unlbl_stitch_19203,1,True
+Is it a better baseline model?,ReAct_Unlabeled,unlbl_stitch_19287,1,True
+Did I miss something?,ReAct_Unlabeled,unlbl_stitch_19320,1,True
+It has a few shortcomings.,ReAct_Unlabeled,unlbl_stitch_19417,1,True
+The paper is not anonymized.,ReAct_Unlabeled,unlbl_stitch_19466,1,True
+"[TAB]: please use periods not commas (as in [TAB]), e.g. 96.1 not 96,1 inexistent --> non-existent In this paper, a new heuristic is introduced with the purpose of controlling the exploration in deep reinforcement learning.",ReAct_Unlabeled,unlbl_stitch_19485,1,True
+- In paragraph below eq.,ReAct_Unlabeled,unlbl_stitch_19552,1,True
+This is not specific to sets.,ReAct_Unlabeled,unlbl_stitch_19565,1,True
+"Minor issues: On page 5, above [SEC], d_j -> o_j ? the footnote on page 5: we not consider -> we do not consider? on page 6 and 7,   6.000, 1.000 and 10.000 training examples ->  6000, 1000 and 10,000 training examples Summary: - This paper proposes a hand-designed network architecture on a graph of object proposals to perform soft non-maximum suppression to get object count.",ReAct_Unlabeled,unlbl_stitch_19600,1,True
+What is the standard deviation?,ReAct_Unlabeled,unlbl_stitch_19724,1,True
+[MATH_EXPRESSION] Weak reject.,ReAct_Unlabeled,unlbl_stitch_19949,1,True
+Or is there more to it?,ReAct_Unlabeled,unlbl_stitch_19993,1,True
+UPDATE: Thank you for the revision and clarifications.,ReAct_Unlabeled,unlbl_stitch_20017,1,True
+"The authors have addressed my concerns, and clarified a misunderstanding of the baseline that I had, which I appreciate.",ReAct_Unlabeled,unlbl_stitch_20075,1,True
+"This, however, is not addressed in the paper.",ReAct_Unlabeled,unlbl_stitch_20109,1,True
+A discussion is needed.,ReAct_Unlabeled,unlbl_stitch_20204,1,True
+This is really suspicious.,ReAct_Unlabeled,unlbl_stitch_20219,1,True
+Why is this relevant to this work?,ReAct_Unlabeled,unlbl_stitch_20334,1,True
+Is it experiments from [FIG].,ReAct_Unlabeled,unlbl_stitch_20387,1,True
+What input is injecting?,ReAct_Unlabeled,unlbl_stitch_20388,1,True
+What is the role of PLAID?,ReAct_Unlabeled,unlbl_stitch_20393,1,True
+Will this be feasible?,ReAct_Unlabeled,unlbl_stitch_20396,1,True
+3) Technical details.,ReAct_Unlabeled,unlbl_stitch_20444,1,True
+- The caption of [FIG] is missing.,ReAct_Unlabeled,unlbl_stitch_20611,1,True
+"- What is the ""recommendation age"" ?",ReAct_Unlabeled,unlbl_stitch_20715,1,True
+Comments: I have my concerns about the effectiveness of the notion of privacy introduced in this paper.,ReAct_Unlabeled,unlbl_stitch_20731,1,True
+"It is a minor concern, anyway.",ReAct_Unlabeled,unlbl_stitch_20800,1,True
+"However, this is not well justified.",ReAct_Unlabeled,unlbl_stitch_20888,1,True
+"Detailed comments: ""s with environment"" -> ""s with the environment""?",ReAct_Unlabeled,unlbl_stitch_20919,1,True
+"""those appeared on the expert’s demonstrations"" -> ""those appearing in the expert’s demonstrations"".",ReAct_Unlabeled,unlbl_stitch_20924,1,True
+My concerns: 1. There is no analysis on what the regularization effect is.,ReAct_Unlabeled,unlbl_stitch_21007,1,True
+Is it data dependent?,ReAct_Unlabeled,unlbl_stitch_21026,1,True
+Cons - The novelty is limited.,ReAct_Unlabeled,unlbl_stitch_21264,1,True
+4.1 --> a discussion of the large mini-batch size (1024) could be useful.,ReAct_Unlabeled,unlbl_stitch_21345,1,True
+"My understanding is that large mini-batches are required to use averaged gradients and get smooth updates. end of 4.1 --> unclear what ""equivalent bits"" means In order to compress DNN intermediate feature maps the authors covert fixed-point activations into vectors over the smallest finite field, the Galois field of two elements (GF(2)) and use nonlinear dimentionality reduction layers.",ReAct_Unlabeled,unlbl_stitch_21346,1,True
+I find this of limited usefulness.,ReAct_Unlabeled,unlbl_stitch_21366,1,True
+Can this be formalized?,ReAct_Unlabeled,unlbl_stitch_21419,1,True
+[FIG] is hard to understand.,ReAct_Unlabeled,unlbl_stitch_21660,1,True
+Sorry for any inconvenience.,ReAct_Unlabeled,unlbl_stitch_21698,1,True
+This is not discussed.,ReAct_Unlabeled,unlbl_stitch_21704,1,True
+Is the Bayesian optimization necessary?,ReAct_Unlabeled,unlbl_stitch_21729,1,True
+"What is ""performance"" measured in?",ReAct_Unlabeled,unlbl_stitch_21776,1,True
+Is that important for training?,ReAct_Unlabeled,unlbl_stitch_21818,1,True
+Is there any reason for this?,ReAct_Unlabeled,unlbl_stitch_21868,1,True
+Or the gain is additive?,ReAct_Unlabeled,unlbl_stitch_21902,1,True
+I won't repeat it here.,ReAct_Unlabeled,unlbl_stitch_21913,1,True
+Update: the revised version of the paper addresses all my concerns about experiments.,ReAct_Unlabeled,unlbl_stitch_21918,1,True
+This might be worth mentioning.,ReAct_Unlabeled,unlbl_stitch_21938,1,True
+[MATH_EXPRESSION] [TAB] is unclear.,ReAct_Unlabeled,unlbl_stitch_21942,1,True
+[MATH_EXPRESSION] x_t?,ReAct_Unlabeled,unlbl_stitch_21955,1,True
+The writing could be improved.,ReAct_Unlabeled,unlbl_stitch_21984,1,True
+Is this the state of the art?,ReAct_Unlabeled,unlbl_stitch_21999,1,True
+D_k is also not defined.,ReAct_Unlabeled,unlbl_stitch_22450,1,True
+This paper is hard to read.,ReAct_Unlabeled,unlbl_stitch_22493,1,True
+Proposition 1 is wrong.,ReAct_Unlabeled,unlbl_stitch_22500,1,True
+Significance: Not very significant.,ReAct_Unlabeled,unlbl_stitch_22512,1,True
+How is this happening?,ReAct_Unlabeled,unlbl_stitch_22725,1,True
+Is it only for the validation set?,ReAct_Unlabeled,unlbl_stitch_22732,1,True
+Not available or not a number?,ReAct_Unlabeled,unlbl_stitch_22806,1,True
+How is estimated p(\Theta|D) ?,ReAct_Unlabeled,unlbl_stitch_22833,1,True
+It is actually impossible to do this.,ReAct_Unlabeled,unlbl_stitch_22920,1,True
+This is definitely not the right citation.,ReAct_Unlabeled,unlbl_stitch_22929,1,True
+- The presentation can be improved.,ReAct_Unlabeled,unlbl_stitch_22980,1,True
+Is there a reasoning for this statement?,ReAct_Unlabeled,unlbl_stitch_23018,1,True
+Please elaborate on this.,ReAct_Unlabeled,unlbl_stitch_23104,1,True
+Please explain the difference.,ReAct_Unlabeled,unlbl_stitch_23108,1,True
+A few questions: (1).,ReAct_Unlabeled,unlbl_stitch_23146,1,True
+"What is a ""base-level learner""?",ReAct_Unlabeled,unlbl_stitch_23171,1,True
+"6. typo: [SEC] parg 5, “current iterate” -> “current iteration”.",ReAct_Unlabeled,unlbl_stitch_23188,1,True
+MINOR COMMENTS Abstract: “Little studies” -> “Few studies” [TAB]: “approach” -> “approaches” [FIG]: Use the same y-axis scale for all subplots (if possible) to simplify comparison.,ReAct_Unlabeled,unlbl_stitch_23238,1,True
+"[MATH_EXPRESSION] === update === I lowered my score and confidence, see my new post below.",ReAct_Unlabeled,unlbl_stitch_23353,1,True
+"The revision didn't address my concerns, and I've lowered my rating.",ReAct_Unlabeled,unlbl_stitch_23460,1,True
+Clarification is needed.,ReAct_Unlabeled,unlbl_stitch_23490,1,True
+Is this finetuned during training?,ReAct_Unlabeled,unlbl_stitch_23523,1,True
+Why not consider ImageNet?,ReAct_Unlabeled,unlbl_stitch_23675,1,True
+"For example: ""training model paramater""  --> ""training model parameters"" (assuming the neural networks have more than 1 parameter) [MATH_EXPRESSION] [MATH_EXPRESSION] As you are considering the single highest-scoring class, there should probably be an argmax somewhere.",ReAct_Unlabeled,unlbl_stitch_23762,1,True
+These should be labelled.,ReAct_Unlabeled,unlbl_stitch_23768,1,True
+I'm not sure this is true.,ReAct_Unlabeled,unlbl_stitch_23770,1,True
+I therefore recommend it be rejected.,ReAct_Unlabeled,unlbl_stitch_23783,1,True
+The paper is not mature.,ReAct_Unlabeled,unlbl_stitch_23787,1,True
+Rewriting is strongly suggested.,ReAct_Unlabeled,unlbl_stitch_23815,1,True
+"This is a deterministic step, right?",ReAct_Unlabeled,unlbl_stitch_23856,1,True
+This is strange to me.,ReAct_Unlabeled,unlbl_stitch_23897,1,True
+This needs to be addressed.,ReAct_Unlabeled,unlbl_stitch_23945,1,True
+This needs to be explored.,ReAct_Unlabeled,unlbl_stitch_23950,1,True
+"Minor Second line of [SEC]: “lesser” -> less or fewer The paper seems to claims that 1) certain ConvNet architectures, particularly AlexNet and VGG, have too many parameters, 2) the sensible solution is leave the trunk of the ConvNet unchanged, and to randomly sparsify the top-most weight matrices.",ReAct_Unlabeled,unlbl_stitch_24025,1,True
+The references need work.,ReAct_Unlabeled,unlbl_stitch_24083,1,True
+The usage is inconsistent.,ReAct_Unlabeled,unlbl_stitch_24191,1,True
+Thanks to the reviewer for clarifying this.,ReAct_Unlabeled,unlbl_stitch_24233,1,True
+This is in general not true.,ReAct_Unlabeled,unlbl_stitch_24269,1,True
+The notation for [EQ] is not explained.,ReAct_Unlabeled,unlbl_stitch_24287,1,True
+I have read the rebuttal and still not convinced.,ReAct_Unlabeled,unlbl_stitch_24370,1,True
+This should be explained in the rebuttal.,ReAct_Unlabeled,unlbl_stitch_24385,1,True
+Am I mistaken somewhere?,ReAct_Unlabeled,unlbl_stitch_24430,1,True
+"- ""A complete theoretical treatment of asynchronous SHA is out of the scope of this paper"" -> is some theoretical treatment in scope?",ReAct_Unlabeled,unlbl_stitch_24442,1,True
+"-I feel the model is seems overly complicated for the small gain (i.e. 75.7->76.0 Exact Match), especially on a relatively exhausted dataset (SQuAD) that is known to have lots of pecularities (see anonymous comment below).",ReAct_Unlabeled,unlbl_stitch_24624,1,True
+"Indeed, [EQ]) matters.",ReAct_Unlabeled,unlbl_stitch_24724,1,True
+My concerns are mainly on the proposed BoostResNet algorithm.,ReAct_Unlabeled,unlbl_stitch_24741,1,True
+Is there any explanations?,ReAct_Unlabeled,unlbl_stitch_24755,1,True
+Also this result is not available.,ReAct_Unlabeled,unlbl_stitch_24893,1,True
+"[MATH_EXPRESSION] .N} are distinct variables. How [SEC] is related to the learning of this might be concatenating these N distinct variables into one (if that's what you mean). Talking about the joint distribution and inference process in this way might more align with your idea. Also, the paper actually only deals with 2 level. It seems to me that it's meaningless to generalize to n levels in [SEC], since you do not have any support of it. In conclusion, the reviewer thinks that this work is incomplete and does not worth publishing with its current quality. ============================================================== The reviewer read the response from the authors. However, I do not think the authors resolved the issues I mentioned. And I am still not convinced by the quality of the paper. I would say the idea is not bad, but the paper is still not well-prepared. So I do not change my decision.",ReAct_Unlabeled,unlbl_stitch_24897,1,True
+Therefore the novelty is limited.,ReAct_Unlabeled,unlbl_stitch_24911,1,True
+Is it the other attributes ?,ReAct_Unlabeled,unlbl_stitch_24977,1,True
+Minor: - no legend for [FIG] -notes -> noted have focused The paper attempts to extend the predictive coding model to a multilayer network.,ReAct_Unlabeled,unlbl_stitch_25018,1,True
+This question is not answered in the paper.,ReAct_Unlabeled,unlbl_stitch_25117,1,True
+Please expand on this.,ReAct_Unlabeled,unlbl_stitch_25183,1,True
+The tables look ugly.,ReAct_Unlabeled,unlbl_stitch_25215,1,True
+- we propose ... as propose -> unclear: what do you propose?,ReAct_Unlabeled,unlbl_stitch_25330,1,True
+"Text corrections: p 2 ""we are more precise"" -> ""we give more details"" p 3 and p 2 -- local maximum (not maxima) for a single maximum.",ReAct_Unlabeled,unlbl_stitch_25426,1,True
+This is not a generalizable metric.,ReAct_Unlabeled,unlbl_stitch_25523,1,True
+Is the quality really better?,ReAct_Unlabeled,unlbl_stitch_25535,1,True
+What about the Beta-VAE?,ReAct_Unlabeled,unlbl_stitch_25613,1,True
+[MATH_EXPRESSION] EDIT: The rating has been changed.,ReAct_Unlabeled,unlbl_stitch_25670,1,True
+- [FIG] is also not clear.,ReAct_Unlabeled,unlbl_stitch_25768,1,True
+Is it possible to incorporate this?,ReAct_Unlabeled,unlbl_stitch_25871,1,True
+"The authors state ""This problem is simply a matter of choosing the best candidate among the given candidates in a specific situation."" -> It would be nice to have examples of what constitutes a ""candidate"" or ""situation""?",ReAct_Unlabeled,unlbl_stitch_25990,1,True
+Unfortunately this is not the case here.,ReAct_Unlabeled,unlbl_stitch_26002,1,True
+This is slightly undesired.,ReAct_Unlabeled,unlbl_stitch_26068,1,True
+Revision: The authors have addressed my concerns around the achievable speedup.,ReAct_Unlabeled,unlbl_stitch_26148,1,True
+I have a few questions/concerns.,ReAct_Unlabeled,unlbl_stitch_26158,1,True
+"Typos  1. abstract: ""gate recurrent unit"" -> ""gated recurrent unit"" 2. [EQ]): remove parenthesis in c_(t-1) 3. [SEC], paragraph 1: ""For the weight matrices, instead of on the whole, we quantize them row by row."" -> ""We don't apply quantization on the full matrices but rather row by row."" 4. [SEC], paragraph 2: Which W matrix is it?",ReAct_Unlabeled,unlbl_stitch_26177,1,True
+This should be analyzed empirically.,ReAct_Unlabeled,unlbl_stitch_26190,1,True
+Lack of experimental validation.,ReAct_Unlabeled,unlbl_stitch_26488,1,True
+This is misleading and NOT true.,ReAct_Unlabeled,unlbl_stitch_26548,1,True
+This should be rephrased elsewhere.,ReAct_Unlabeled,unlbl_stitch_26550,1,True
+"Minor comments: - P.1, L.5 in the third paragraph: architexture -> architecture - What does ""Cor"" of CorGAN mean?",ReAct_Unlabeled,unlbl_stitch_26715,1,True
+This assertion seems flawed.,ReAct_Unlabeled,unlbl_stitch_26752,1,True
+(presumably detrimentally).,ReAct_Unlabeled,unlbl_stitch_26782,1,True
+-Writing can be improved.,ReAct_Unlabeled,unlbl_stitch_26814,1,True
+This is clearly not valid in practice.,ReAct_Unlabeled,unlbl_stitch_26898,1,True
+Or the actual optimization?,ReAct_Unlabeled,unlbl_stitch_27118,1,True
+"Minor: - Paper is significantly over the page limit; in many places, writing could be improved, many typos in paper (in the first page: ""project of design""-> ""project of designing""; ""farmework""->""framework""; ""we consider the scenario"" ""problems that are once"" are clumsy).",ReAct_Unlabeled,unlbl_stitch_27151,1,True
+It is not convincing enough for me.,ReAct_Unlabeled,unlbl_stitch_27194,1,True
+It would be interesting to know.,ReAct_Unlabeled,unlbl_stitch_27331,1,True
+"However, it was not compared to.",ReAct_Unlabeled,unlbl_stitch_27380,1,True
+- The results are not fully-convincing.,ReAct_Unlabeled,unlbl_stitch_27686,1,True
+Is it the optimal solution (x_t)?,ReAct_Unlabeled,unlbl_stitch_27695,1,True
+Please provide details.,ReAct_Unlabeled,unlbl_stitch_27799,1,True
+(1) without definition.,ReAct_Unlabeled,unlbl_stitch_27917,1,True
+The experiments are not reliable.,ReAct_Unlabeled,unlbl_stitch_27946,1,True
+It is difficult to follow Eq.,ReAct_Unlabeled,unlbl_stitch_28015,1,True
+I would vote for accept if my concerns can be addressed.,ReAct_Unlabeled,unlbl_stitch_28031,1,True
+"The author's respond address part of my concerns, so I have adjusted my rating.",ReAct_Unlabeled,unlbl_stitch_28032,1,True
+How to train the model?,ReAct_Unlabeled,unlbl_stitch_28089,1,True
+What is the loss function?,ReAct_Unlabeled,unlbl_stitch_28090,1,True
+* The experiments are weak.,ReAct_Unlabeled,unlbl_stitch_28091,1,True
+- [FIG] is not clear.,ReAct_Unlabeled,unlbl_stitch_28271,1,True
+Is this a development set?,ReAct_Unlabeled,unlbl_stitch_28273,1,True
+What is the measurement precision?,ReAct_Unlabeled,unlbl_stitch_28282,1,True
+Acronyms should be defined.,ReAct_Unlabeled,unlbl_stitch_28326,1,True
+2. Baseline is not strong.,ReAct_Unlabeled,unlbl_stitch_28568,1,True
+No reference to the figure.,ReAct_Unlabeled,unlbl_stitch_28578,1,True
+A reference would be appreciated.,ReAct_Unlabeled,unlbl_stitch_28661,1,True
+Perhaps this is a bug in the reference?,ReAct_Unlabeled,unlbl_stitch_28730,1,True
+"- There are several typos (e.g. pg 5 ""staking"" -> ""stacking"").",ReAct_Unlabeled,unlbl_stitch_28777,1,True
+1.	The experiment is weak.,ReAct_Unlabeled,unlbl_stitch_28830,1,True
+The baselines are weak.,ReAct_Unlabeled,unlbl_stitch_28888,1,True
+- How is the system supervised?,ReAct_Unlabeled,unlbl_stitch_28969,1,True
+Is this what you meant?,ReAct_Unlabeled,unlbl_stitch_29011,1,True
+It is common to report those.,ReAct_Unlabeled,unlbl_stitch_29240,1,True
+"Minor remarks: [SEC], line 4: ""Combing"" -> ""Combining"" Page 14, first equation: There should be ""="" before the second expectation.",ReAct_Unlabeled,unlbl_stitch_29294,1,True
+* The bound appears to be sub-optimal.,ReAct_Unlabeled,unlbl_stitch_29321,1,True
+(40) is not valid anymore.,ReAct_Unlabeled,unlbl_stitch_29368,1,True
+The revised version does address my concerns.,ReAct_Unlabeled,unlbl_stitch_29411,1,True
+This renders the comparison unfair.,ReAct_Unlabeled,unlbl_stitch_29428,1,True
+I think this needs clarification.,ReAct_Unlabeled,unlbl_stitch_29489,1,True
+[MATH_EXPRESSION] Why not compare to this?,ReAct_Unlabeled,unlbl_stitch_29492,1,True
+UPDATE: The revised version seems to be a bit more clear.,ReAct_Unlabeled,unlbl_stitch_29577,1,True
+The results are mediocre.,ReAct_Unlabeled,unlbl_stitch_29623,1,True
+"Typos: 1. Optimization -> optimize (bottom of page 2) 2. Should be a period after sentence starting ""Several algorithms"" on page 2.",ReAct_Unlabeled,unlbl_stitch_29690,1,True
+Why is this the case?,ReAct_Unlabeled,unlbl_stitch_29723,1,True
+This aspect is not really discussed.,ReAct_Unlabeled,unlbl_stitch_29772,1,True
+Have the authors tried this ?,ReAct_Unlabeled,unlbl_stitch_29852,1,True
+Doesn’t this prevent exploration?,ReAct_Unlabeled,unlbl_stitch_29892,1,True
+(Guessing no...) Why not?,ReAct_Unlabeled,unlbl_stitch_29910,1,True
+Is there a reason for this?,ReAct_Unlabeled,unlbl_stitch_29937,1,True
+Is it the trace hypothesis?,ReAct_Unlabeled,unlbl_stitch_30007,1,True
+- Not much novelty/originality.,ReAct_Unlabeled,unlbl_stitch_30117,1,True
+Which method is used?,ReAct_Unlabeled,unlbl_stitch_30443,1,True
+* How practical is this method?,ReAct_Unlabeled,unlbl_stitch_30454,1,True
+"This is a validation set, right?",ReAct_Unlabeled,unlbl_stitch_30462,1,True
+How should this be addressed?,ReAct_Unlabeled,unlbl_stitch_30530,1,True
+"Smaller ambiguities in wording are also in the paper : e.g. related work -> long term prediction ""in this work"" refers to the work mentioned but could as well be the work that they are presenting.",ReAct_Unlabeled,unlbl_stitch_30707,1,True
+The novelty of the method is limited.,ReAct_Unlabeled,unlbl_stitch_30733,1,True
+ Update based on author response  I have read the authors response and thank them for the additional details.,ReAct_Unlabeled,unlbl_stitch_30903,1,True
+Are punctuations removed?,ReAct_Unlabeled,unlbl_stitch_30943,1,True
+What is the x-axis in [FIG]?,ReAct_Unlabeled,unlbl_stitch_30957,1,True
+"[MATH_EXPRESSION] - page 7 3.3 first para: ""evidence fully"" -> ""evidence to be fully"" [1] Jason Weston, Sumit Chopra, and Antoine Bordes.",ReAct_Unlabeled,unlbl_stitch_30986,1,True
+"More importantly, eq.",ReAct_Unlabeled,unlbl_stitch_31012,1,True
+I find this misleading.,ReAct_Unlabeled,unlbl_stitch_31165,1,True
+Is it related to any experiment?,ReAct_Unlabeled,unlbl_stitch_31211,1,True
+What is the goal of the training?,ReAct_Unlabeled,unlbl_stitch_31383,1,True
+The number of steps is not given.,ReAct_Unlabeled,unlbl_stitch_31513,1,True
+The references need cleaned-up.,ReAct_Unlabeled,unlbl_stitch_31591,1,True
+New exploration policies?,ReAct_Unlabeled,unlbl_stitch_31671,1,True
+Arbitration in mixtures of experts?,ReAct_Unlabeled,unlbl_stitch_31672,1,True
+- The citation to binary-weight-networks is missing.,ReAct_Unlabeled,unlbl_stitch_31775,1,True
+This should be easy to improve.,ReAct_Unlabeled,unlbl_stitch_31799,1,True
+Why square and cercles?,ReAct_Unlabeled,unlbl_stitch_31801,1,True
+"- Definition 1.4: ""piece-linear"" -> ""piecewise linear""?",ReAct_Unlabeled,unlbl_stitch_31858,1,True
+"- Proof 1.4: ""and finally"" -> ""And finally"".",ReAct_Unlabeled,unlbl_stitch_31860,1,True
+"- Proposition 1.7: ""ProjW,l""?",ReAct_Unlabeled,unlbl_stitch_31866,1,True
+"- First line of Subsection 2.3: "". is always"" -> ""is always"".",ReAct_Unlabeled,unlbl_stitch_31871,1,True
+"- Conclusion: ""we can to"" -> ""we can"".",ReAct_Unlabeled,unlbl_stitch_31877,1,True
+Explanations are clear.,ReAct_Unlabeled,unlbl_stitch_31883,1,True
+Am I misunderstanding something?,ReAct_Unlabeled,unlbl_stitch_31964,1,True
+Is this due to nonlinear mixing?,ReAct_Unlabeled,unlbl_stitch_32161,1,True
+"- [FIG] may be misleading as h are not defined  Review updates: Rating 6 -> 7 Confidence 2 -> 4 The rebuttal and update addressed a number of my concerns, cleared up confusing sections, and moved the paper materially closer to being publication-worthy, thus I’ve increased my score.",ReAct_Unlabeled,unlbl_stitch_32163,1,True
+Fully connected layers?,ReAct_Unlabeled,unlbl_stitch_32374,1,True
+"Minor comments: Page 3, [SEC], first paragraph: typo in the last sentence: “dose” -> “does” Same typo above for page 5, the sentence right before (2) Bias-based pruning The authors present an l-1 regularized SVRG based training algorithm that is able to force many weights of the network to be 0, hence leading to good compression of the model.",ReAct_Unlabeled,unlbl_stitch_32418,1,True
+Is the neighborhood predefined?,ReAct_Unlabeled,unlbl_stitch_32540,1,True
+1. The paper is not self-contained.,ReAct_Unlabeled,unlbl_stitch_32765,1,True
+The presentation is not always clear.,ReAct_Unlabeled,unlbl_stitch_32821,1,True
+"[MATH_EXPRESSION] forall ""x"".",ReAct_Unlabeled,unlbl_stitch_32839,1,True
+Ratio of what to what?,ReAct_Unlabeled,unlbl_stitch_32889,1,True
+"However, this conclusion is not convincing.",ReAct_Unlabeled,unlbl_stitch_32914,1,True
+"However, it is not well organized.",ReAct_Unlabeled,unlbl_stitch_32921,1,True
+"Hopefully it is in the sense that there are more parameters than needed for good performance at the true global minimum (the additional parameters helping with the process of *finding* a good minimum rather than its existence) or in the sense that M -> infinity for N ""equal to"" infinity.",ReAct_Unlabeled,unlbl_stitch_32951,1,True
+The could be stated explicitly.,ReAct_Unlabeled,unlbl_stitch_32986,1,True
+What's the significance?,ReAct_Unlabeled,unlbl_stitch_32995,1,True
+Is this shown somewhere?,ReAct_Unlabeled,unlbl_stitch_33003,1,True
+Notation/readability -> I do respect the author’s mentioning different research field’s notations and understand the complication of building a single framework.,ReAct_Unlabeled,unlbl_stitch_33024,1,True
+Representation-dictionary duality concept -> I think this is a very fundamental piece for the paper and don’t understand why it is in the appendix.,ReAct_Unlabeled,unlbl_stitch_33035,1,True
+Could this be modeled in the network?,ReAct_Unlabeled,unlbl_stitch_33042,1,True
+Results -> I understand the numerical results and comparisons to the Kim et.,ReAct_Unlabeled,unlbl_stitch_33043,1,True
+I cannot review this section.,ReAct_Unlabeled,unlbl_stitch_33108,1,True
+I do not understand this.,ReAct_Unlabeled,unlbl_stitch_33111,1,True
+Please comment on this.,ReAct_Unlabeled,unlbl_stitch_33121,1,True
+Please consider to rephrase.,ReAct_Unlabeled,unlbl_stitch_33145,1,True
+UPDATE: I would like to thank the authors for their detailed response and for adding additional experimental evaluation.,ReAct_Unlabeled,unlbl_stitch_33527,1,True
+This would be more convincing.,ReAct_Unlabeled,unlbl_stitch_33563,1,True
+"Page 3: “for each channel, we only predict C/S binary masks”   -> this seems to be a mistake.",ReAct_Unlabeled,unlbl_stitch_33665,1,True
+Something more complicated?,ReAct_Unlabeled,unlbl_stitch_33675,1,True
+3. The “many-to-many” is ambiguous.,ReAct_Unlabeled,unlbl_stitch_33834,1,True
+Revision: I thank the authors for the updates and addressing some of my concerns.,ReAct_Unlabeled,unlbl_stitch_33903,1,True
+"Update:  In light of Yoon Kim's retraction of replication, I've downgraded my score until the authors provide further validation (i.e. CIFAR and ImageNet samples).",ReAct_Unlabeled,unlbl_stitch_33973,1,True
+“We can further integral out αn “ -> integrate out Major comments: The paper is well-written.,ReAct_Unlabeled,unlbl_stitch_34110,1,True
+Why is dilation used?,ReAct_Unlabeled,unlbl_stitch_34251,1,True
+This is not well presented.,ReAct_Unlabeled,unlbl_stitch_34275,1,True
+What is the performance degradation?,ReAct_Unlabeled,unlbl_stitch_34281,1,True
+(2) as well as the BM parameters in [SEC] - page 5: “nodes H is” -> “nodes H are” REVISION: Thanks to the reviewers for replying to my comments and making the changes.,ReAct_Unlabeled,unlbl_stitch_34330,1,True
+"On the other hand the other reviewers raised valid questions, that led to my decision to not change the overall rating of the paper.",ReAct_Unlabeled,unlbl_stitch_34332,1,True
+What is the benefit of joint-training?,ReAct_Unlabeled,unlbl_stitch_34376,1,True
+"Some minor comments: - [SEC]: ""h disagrees with h"" -> ""h disagrees with f"".",ReAct_Unlabeled,unlbl_stitch_34605,1,True
+"- Last line of [SEC]: ""losses functions"" -> ""loss functions"".",ReAct_Unlabeled,unlbl_stitch_34607,1,True
+"This setting is not ideal, though.",ReAct_Unlabeled,unlbl_stitch_34640,1,True
+How limiting is the learning of a?,ReAct_Unlabeled,unlbl_stitch_34769,1,True
+And which is [FIG].3.1?,ReAct_Unlabeled,unlbl_stitch_34809,1,True
+I may be missing something.,ReAct_Unlabeled,unlbl_stitch_34865,1,True
+Is it density estimation?,ReAct_Unlabeled,unlbl_stitch_34896,1,True
+Is it representation learning?,ReAct_Unlabeled,unlbl_stitch_34898,1,True
+This feels a little under-justified.,ReAct_Unlabeled,unlbl_stitch_34984,1,True
+Is this the right hand plot?,ReAct_Unlabeled,unlbl_stitch_34993,1,True
+And how is this done.,ReAct_Unlabeled,unlbl_stitch_34997,1,True
+More regularization required?,ReAct_Unlabeled,unlbl_stitch_35266,1,True
+I think this is not sufficient.,ReAct_Unlabeled,unlbl_stitch_35545,1,True
+This should be clarified in the rebuttal.,ReAct_Unlabeled,unlbl_stitch_35637,1,True
+"Update: I'm going to change my review to a 6 to acknowledge the substantial improvements you've made—I no longer fear that there are major errors in the paper, but this paper is still solidly borderline, and I'm not completely convinced that any new claim is true.",ReAct_Unlabeled,unlbl_stitch_35856,1,True
+[SEC] is poorly explained.,ReAct_Unlabeled,unlbl_stitch_36112,1,True
+"""-> You are literally hand engineering a shaping reward. The main text misleadingly refers to ""sparse reward"", which usually refers to a single reward upon task completion.",ReAct_Unlabeled,unlbl_stitch_36164,1,True
+This paper should be accepted.,ReAct_Unlabeled,unlbl_stitch_36228,1,True
+Is there a way to avoid this?,ReAct_Unlabeled,unlbl_stitch_36317,1,True
+- Quality of figures.,ReAct_Unlabeled,unlbl_stitch_36318,1,True
+My concerns with the paper include: a) the paper says that the same method works for convolutional neural networks but I couldn't find anything about convolution. b) the theoretical analysis might be misleading  clearly [SEC] shouldn't have title ALL CRITICAL POINTS ARE GLOBAL MINIMUM because 0 is a critical point but it's not a global minimum.,ReAct_Unlabeled,unlbl_stitch_36322,1,True
+What is the impact of this regularisation?,ReAct_Unlabeled,unlbl_stitch_36379,1,True
+Is it better to use soft-max?,ReAct_Unlabeled,unlbl_stitch_36382,1,True
+"Is this performances, dataset specific?",ReAct_Unlabeled,unlbl_stitch_36387,1,True
+And how is this justified?,ReAct_Unlabeled,unlbl_stitch_36400,1,True
+It would be fair to discuss this.,ReAct_Unlabeled,unlbl_stitch_36566,1,True
+It seems out of place.,ReAct_Unlabeled,unlbl_stitch_36590,1,True
+I have a few reservations.,ReAct_Unlabeled,unlbl_stitch_36597,1,True
+"This is, of course, unacceptable!",ReAct_Unlabeled,unlbl_stitch_36697,1,True
+When does it not work?,ReAct_Unlabeled,unlbl_stitch_36775,1,True
+"(The transfer from positive->negative on an ambiguous example was interesting: Original ""service is good but not quick"" -> ""service is good but not quick, but the service is horrible"", and ""service is good, and horrible, is the same and worst time ever"". I found it interesting to see what it does with the mixed signals of the word ""but"": on one hand, keeping it helps preserve the structure of the sentence, but on the other hand, keeping it makes it hard to flip the valence. I guess the most accurate opposite would have been ""The service is quick but not good""... ) I really like the reverse perplexity measure.",ReAct_Unlabeled,unlbl_stitch_36780,1,True
+But is this indeed the case?,ReAct_Unlabeled,unlbl_stitch_36999,1,True
+I am likely to change the rating based on the comparison with other methods.,ReAct_Unlabeled,unlbl_stitch_37034,1,True
+"This is for multi-GPU, correct?",ReAct_Unlabeled,unlbl_stitch_37118,1,True
+This needs to be explicitly stated.,ReAct_Unlabeled,unlbl_stitch_37119,1,True
+Is that a difference?,ReAct_Unlabeled,unlbl_stitch_37389,1,True
+Is DTC robust to hyperparameters?,ReAct_Unlabeled,unlbl_stitch_37397,1,True
+"- ""That is, environment"" -> ""That is, the environment"" - In the last paragraph of the intro, it would be helpful to more clearly state what the experiments can accomplish.",ReAct_Unlabeled,unlbl_stitch_37570,1,True
+"[MATH_EXPRESSION] - The last two paragraphs of [SEC] are very difficult to understand without reading the method yet - ""conventional RL solver tend"" -> ""conventional RL tend"", also should mention sparse reward in this sentence.",ReAct_Unlabeled,unlbl_stitch_37572,1,True
+What is the task here?,ReAct_Unlabeled,unlbl_stitch_37727,1,True
+It is not clear how it is used.,ReAct_Unlabeled,unlbl_stitch_37751,1,True
+The toy experiment is not convincing.,ReAct_Unlabeled,unlbl_stitch_37755,1,True
+What threshold is used?,ReAct_Unlabeled,unlbl_stitch_37789,1,True
+- What is 'Luna subsets'?,ReAct_Unlabeled,unlbl_stitch_37790,1,True
+Is this effective or terrible?,ReAct_Unlabeled,unlbl_stitch_38060,1,True
+This was not obvious to me.,ReAct_Unlabeled,unlbl_stitch_38065,1,True
+* The experiments seemed thin.,ReAct_Unlabeled,unlbl_stitch_38087,1,True
+Why is it not c-dimentional?,ReAct_Unlabeled,unlbl_stitch_38112,1,True
+Is it suitable for lifelong learning?,ReAct_Unlabeled,unlbl_stitch_38120,1,True
+What's the evidence *for* the theory?,ReAct_Unlabeled,unlbl_stitch_38227,1,True
+The connection to manifolds is weak.,ReAct_Unlabeled,unlbl_stitch_38229,1,True
+The writing is poor throughout.,ReAct_Unlabeled,unlbl_stitch_38233,1,True
+Currently the novelty is not obvious.,ReAct_Unlabeled,unlbl_stitch_38348,1,True
+"In addition to my concerns about the experimental evaluation, I have concerns about the general approach.",ReAct_Unlabeled,unlbl_stitch_38492,1,True
+"- It's odd to write ""we do not suggest a specific neural network architecture for the middle layers, one should seelect whichever architecture that is appropriate for the domain at hand."" Not only is it impossible to reproduce a paper without any architectural details, but the result is then that [FIG] essentially says inputs -> ""magic"" -> outputs.",ReAct_Unlabeled,unlbl_stitch_38518,1,True
+The probability of what?,ReAct_Unlabeled,unlbl_stitch_38548,1,True
+"2 Related Work “POSG, a class of reinforcement learning with multiple ..” -> reinforcement learning framework “Another one is credit assignment. Instead of reward.. ” Two sentences are disconnected and need to be rewritten.",ReAct_Unlabeled,unlbl_stitch_38585,1,True
+"“,which we propose in a later part of this paper” -> which we propose in this paper 3. Background “a function from the state and the action of an agent to the real value” -> a reward function Should provide a citation for DRQN There is a big gap between the last two paragraphs of section 3.",ReAct_Unlabeled,unlbl_stitch_38590,1,True
+“Q_it maximizing the equation is designated as the optimal price.” Which equation? e_j and 0 are not defined in [EQ] 6 Experiment setare -> set are what is the std for CartPole in [TAB] It is hard to judge the significance of the results on the left side of [FIG].,ReAct_Unlabeled,unlbl_stitch_38595,1,True
+[MATH_EXPRESSION] None of this is discussed.,ReAct_Unlabeled,unlbl_stitch_38621,1,True
+My overall rating of the paper has not changed.,ReAct_Unlabeled,unlbl_stitch_38904,1,True
+"- ""This is entirely possible though the ensemble representation"" typo, through -> through - That instance normalization causes noisy audio is an interesting empirical result, but I'm interested in a principled explanation of why this would happen.",ReAct_Unlabeled,unlbl_stitch_38941,1,True
+"- In the [TAB] caption, it is written ""same graph structure with training set"" --> do you mean ""same graph structure than the training set""?",ReAct_Unlabeled,unlbl_stitch_39095,1,True
+I believe this statement is not correct.,ReAct_Unlabeled,unlbl_stitch_39130,1,True
+Should be stated for replicability.,ReAct_Unlabeled,unlbl_stitch_39223,1,True
+How is the loss calculated?,ReAct_Unlabeled,unlbl_stitch_39233,1,True
+"More specifically, my concerns, which prevent me from recommending acceptance, are as follows: - The authors assume the point process contains duration and intervals, however, point processes generally do not have duration per event but they are discrete events localized in particular time points.",ReAct_Unlabeled,unlbl_stitch_39290,1,True
+Does it worsen the stability?,ReAct_Unlabeled,unlbl_stitch_39345,1,True
+" updates to review:  I think the paper is much improved. It is much more clear and the experiments are more focused and more closely connected to the earlier content in the paper. Thanks to the authors for trying to address all of my concerns. I now better understand in what sense the representation space is optimal.  I had been thinking (or perhaps ""hoping"" is a better word) that the term ""optimal"" implied maximal in terms of some quantifiable measure, but it's more of an empirical ""optimality"".  This makes the paper an empirical paper based on a reasonable and sensible intuition, rather than a theoretical result.  This was a little disappointing to me, but I do still think the paper is marginally above the acceptance threshold and have increased my score accordingly.  original review below:  This paper is about rethinking how to use encoder-decoder architectures for representation learning when the training objective contains a similarity between the decoder output and the encoding of something else.",ReAct_Unlabeled,unlbl_stitch_39365,1,True
+But this is not available.,ReAct_Unlabeled,unlbl_stitch_39458,1,True
+But I might be wrong.,ReAct_Unlabeled,unlbl_stitch_39527,1,True
+[FIG] is hard to read.,ReAct_Unlabeled,unlbl_stitch_39556,1,True
+======= Update: The new version addresses some of my concerns.,ReAct_Unlabeled,unlbl_stitch_39600,1,True
+This is not defined previously.,ReAct_Unlabeled,unlbl_stitch_39636,1,True
+What is exactly merge-and-reduce?,ReAct_Unlabeled,unlbl_stitch_39774,1,True
+Please fix the description.,ReAct_Unlabeled,unlbl_stitch_40367,1,True
+The title is not appropriate for this paper.,ReAct_Unlabeled,unlbl_stitch_40423,1,True
+Minor comments: - In Eq.,ReAct_Unlabeled,unlbl_stitch_40679,1,True
+"- Page 4: ""In contrast, our model addresses only requires"" --> drop the ""addresses"".",ReAct_Unlabeled,unlbl_stitch_40686,1,True
+1 is rather peculiar.,ReAct_Unlabeled,unlbl_stitch_40759,1,True
+"What is the ""combined""?",ReAct_Unlabeled,unlbl_stitch_40907,1,True
+This is the weakest claim of the paper.,ReAct_Unlabeled,unlbl_stitch_40930,1,True
+Detailed explanation is necessary.,ReAct_Unlabeled,unlbl_stitch_40989,1,True
+L2 should be L_2 norm; 5.4. euclidean -> Euclidean; pvalue-> p-value; 5.5.,ReAct_Unlabeled,unlbl_stitch_40998,1,True
+Interpretation of [FIG] is not clear.,ReAct_Unlabeled,unlbl_stitch_41185,1,True
+- A few typos in the paper.,ReAct_Unlabeled,unlbl_stitch_41286,1,True
+"For now, I think the submission is good for a weak accept –- if the authors address my concerns, and/or correct my potential misunderstanding of the issues, I'd be happy to upgrade my review to an accept.",ReAct_Unlabeled,unlbl_stitch_41500,1,True
+"Minor comments: [SEC]: ""a affine"" -> ""an affine"" Typo in [SEC]: ""of a of a"" It's interesting in [FIG] that the crossword puzzle appears in the image of the lighthouse.",ReAct_Unlabeled,unlbl_stitch_41510,1,True
+"""from the first m domain corpus"" -> ""from the first m domains""?",ReAct_Unlabeled,unlbl_stitch_41602,1,True
+"""may not helpful"" -> ""may not be helpful"" ""vocabularie"" -> ""vocabulary"" ""system first retrieval"" -> ""system first retrieves"" COMMENTS ON REVISIONS: I appreciate the authors including the new experiments against concatenation baselines.",ReAct_Unlabeled,unlbl_stitch_41603,1,True
+Is mini-RTS a deterministic environment?,ReAct_Unlabeled,unlbl_stitch_41832,1,True
+Because f is not good?,ReAct_Unlabeled,unlbl_stitch_41859,1,True
+- The caption in [FIG] is malformatted.,ReAct_Unlabeled,unlbl_stitch_41880,1,True
+This seems to be inconsistent.,ReAct_Unlabeled,unlbl_stitch_41974,1,True
+The interpretation of [FIG] is off.,ReAct_Unlabeled,unlbl_stitch_42020,1,True
+"MINOR POINTS: page 5: ""the any"" (typo) page 5: ""ture"" -> ""true"" (typo) I have read comments and rebuttal - i do not have the luxury of time to read in depth the revision.",ReAct_Unlabeled,unlbl_stitch_42027,1,True
+"However, it should be discussed.",ReAct_Unlabeled,unlbl_stitch_42104,1,True
+The paper is not well written.,ReAct_Unlabeled,unlbl_stitch_42282,1,True
+Please proof-read carefully.,ReAct_Unlabeled,unlbl_stitch_42302,1,True
+"(3), \tilde{D} is not defined.",ReAct_Unlabeled,unlbl_stitch_42326,1,True
+A traditional (non-neural) LM?,ReAct_Unlabeled,unlbl_stitch_42565,1,True
+What is the explanation for this?,ReAct_Unlabeled,unlbl_stitch_42674,1,True
+"However, this is a bit unsatisfying.",ReAct_Unlabeled,unlbl_stitch_42799,1,True
+"”f(ul(g(x),y))” appears to be a mistake.",ReAct_Unlabeled,unlbl_stitch_42803,1,True
+Please check http://statmt.org/wmt14.,ReAct_Unlabeled,unlbl_stitch_42812,1,True
+It is again over-selling the environment.,ReAct_Unlabeled,unlbl_stitch_42911,1,True
+"- ""we compute the approximate shortest distance from the target room to each location in the house"" --> This assumption is somewhat unrealistic since agents in the real world do not have access to such information.",ReAct_Unlabeled,unlbl_stitch_42916,1,True
+TYPOS etc 3rd last line of [SEC] can fail at selecting -> fail to select In eq.,ReAct_Unlabeled,unlbl_stitch_42994,1,True
+"Appendix B line 5 "", while."" -> incomplete sentence.",ReAct_Unlabeled,unlbl_stitch_42997,1,True
+It’s not properly controlled.,ReAct_Unlabeled,unlbl_stitch_43029,1,True
+It should be a proper control.,ReAct_Unlabeled,unlbl_stitch_43033,1,True
+Evaluation is unclear and incomplete.,ReAct_Unlabeled,unlbl_stitch_43083,1,True
+- The results seem to be inconsistent.,ReAct_Unlabeled,unlbl_stitch_43341,1,True
+Shouldn't be difficult to do.,ReAct_Unlabeled,unlbl_stitch_43345,1,True
+It is more of an ensembling.,ReAct_Unlabeled,unlbl_stitch_43348,1,True
+Is this embedding the DNN?,ReAct_Unlabeled,unlbl_stitch_43392,1,True
+I can't recommend acceptance.,ReAct_Unlabeled,unlbl_stitch_43433,1,True
+"Detailed comments: ""learn hierarchical policies"" -> ""learns hierarchical policies""?",ReAct_Unlabeled,unlbl_stitch_43484,1,True
+"""and is hardly reusable"" -> ""and are hardly reusable"".",ReAct_Unlabeled,unlbl_stitch_43486,1,True
+"""set of skills are"" -> ""set of skills is"".",ReAct_Unlabeled,unlbl_stitch_43489,1,True
+"""The translation from TLTL formula FSA to"" -> ""The translation from TLTL formula to FSA""?",ReAct_Unlabeled,unlbl_stitch_43493,1,True
+""" multiple options policy separately"" -> "" multiple options policies separately""?",ReAct_Unlabeled,unlbl_stitch_43497,1,True
+"""s illustrated in [FIG] ."" -> ""s illustrated in [FIG] .""?",ReAct_Unlabeled,unlbl_stitch_43499,1,True
+""", disagreement emerge"" -> "", disagreements emerge""?",ReAct_Unlabeled,unlbl_stitch_43502,1,True
+"""satisfies task the specification)"" -> ""satisfies the task specification)"".",ReAct_Unlabeled,unlbl_stitch_43508,1,True
+""" and choose to follow"" -> "" and chooses to follow"".",ReAct_Unlabeled,unlbl_stitch_43511,1,True
+""" this makes"" -> "" making"".",ReAct_Unlabeled,unlbl_stitch_43512,1,True
+"On the whole, I like the line of inquiry and the elegant simplicity of the proposed approach, but the paper has some flaws (and there are some gaps in both motivation and the experiments) that led me to assign a lower score.",ReAct_Unlabeled,unlbl_stitch_43627,1,True
+"Still not convinced, unfortunately.",ReAct_Unlabeled,unlbl_stitch_43738,1,True
+The exposition is uneven.,ReAct_Unlabeled,unlbl_stitch_43826,1,True
+"But unless I'm missing something, a bias term isn't even needed to learn in their model, so wouldn't it be simpler and more natural to just assume that the auto-encoder doesn't have a bias term (i.e., x-> W's(Wx))?",ReAct_Unlabeled,unlbl_stitch_43839,1,True
+What motivates this scaling?,ReAct_Unlabeled,unlbl_stitch_43853,1,True
+What are the consequences?,ReAct_Unlabeled,unlbl_stitch_43856,1,True
+"However, it is much undercooked.",ReAct_Unlabeled,unlbl_stitch_43892,1,True
+They could be useful.,ReAct_Unlabeled,unlbl_stitch_43908,1,True
+It is not that straightforward to see this.,ReAct_Unlabeled,unlbl_stitch_44084,1,True
+Could you justify this?,ReAct_Unlabeled,unlbl_stitch_44139,1,True
+This causes the method not to work.,ReAct_Unlabeled,unlbl_stitch_44208,1,True
+"This is not obvious from Appendix B either. p3 [FIG]/p4 [EQ]: Related to the concern regarding the usefulness of the ∂NCM abstraction: While I see how NTMs fit into the NCM abstraction, this is not obvious at all for NRAMs, particularly since in [FIG] modules are introduced that do not follow the color scheme of κ and π in [FIG] (ct, at, bt and the registers). p5: There is related work for incorporating trace supervision into a neural abstract machine that is otherwise trained end-to-end from input-output examples [2]. p5: ""loss on example of difficulties"" -> ""loss on examples of the same difficulty"" p5: Do you have an example for a task and hints from a noisy source?",ReAct_Unlabeled,unlbl_stitch_44277,1,True
+This is rather disappointing.,ReAct_Unlabeled,unlbl_stitch_44313,1,True
+""" This is a somewhat peculiar statement.",ReAct_Unlabeled,unlbl_stitch_44340,1,True
+"[FIG]: This figure is very helpful, however the colour for M->S is wrong in the legend.",ReAct_Unlabeled,unlbl_stitch_44371,1,True
+The paper is written poorly.,ReAct_Unlabeled,unlbl_stitch_44552,1,True
+Overfitting may be unnoticed.,ReAct_Unlabeled,unlbl_stitch_44574,1,True
+[MATH_EXPRESSION] does the training backprop on the embedding? top equation of p4 -> if you don't use it don't introduce it [SEC] is a bit disappointing.,ReAct_Unlabeled,unlbl_stitch_44706,1,True
+This needs to be made clearer.,ReAct_Unlabeled,unlbl_stitch_44761,1,True
+Is that realistic/relevant?,ReAct_Unlabeled,unlbl_stitch_44776,1,True
+"It would be nice to have a little bit of discussion about the motivation for these particular modeling implementationssome are basically the same as in Hu et al. (2017), but obviously the type system here is richer and it might be helpful to highlight some of the extra things it can do. The phrase type semantic potential seems underpowered relative to the rest of the modelis it really making decisions on the basis of 6 sparse features for every (span, type) pair, with no score for the identity of the rule (t_1, t_2 -> t)?",ReAct_Unlabeled,unlbl_stitch_44852,1,True
+Are sub-trees interpretable?,ReAct_Unlabeled,unlbl_stitch_44889,1,True
+This is never discussed.,ReAct_Unlabeled,unlbl_stitch_45310,1,True
+This is clearly not in anyones interest.,ReAct_Unlabeled,unlbl_stitch_45381,1,True
+4. Maybe overclaiming.,ReAct_Unlabeled,unlbl_stitch_45552,1,True
+Is it fixed or dynamic?,ReAct_Unlabeled,unlbl_stitch_45632,1,True
+Am I missing something?,ReAct_Unlabeled,unlbl_stitch_45844,1,True
+This step should be clarified.,ReAct_Unlabeled,unlbl_stitch_45861,1,True
+We will see that it PA a close relationship with BSVD-> We will see that PA is closely related to BSVD more effective than SVD under certain conditions (?).,ReAct_Unlabeled,unlbl_stitch_45900,1,True
+"In addition, it's not self-contained.",ReAct_Unlabeled,unlbl_stitch_45990,1,True
+What is the size of the database?,ReAct_Unlabeled,unlbl_stitch_45995,1,True
+"GRU -> abbreviation not defined I would really appreciate a figure to better explain the subsection ""Encoding External Knowledge"".",ReAct_Unlabeled,unlbl_stitch_45998,1,True
+What is the inference set?,ReAct_Unlabeled,unlbl_stitch_46012,1,True
+"- Page [MATH_EXPRESSION] - Page 2, second paragraph: ""which correctness"" -> ""whose correctness"".",ReAct_Unlabeled,unlbl_stitch_46055,1,True
+"- ""Figure ?? illustrates"".",ReAct_Unlabeled,unlbl_stitch_46259,1,True
+"In general, it is not ready for publication.",ReAct_Unlabeled,unlbl_stitch_46398,1,True
+- Evaluation is not very convincing.,ReAct_Unlabeled,unlbl_stitch_46403,1,True
