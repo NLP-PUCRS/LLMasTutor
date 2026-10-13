@@ -19,13 +19,25 @@ This repository contains the code and data pipeline for the unsupervised discove
 If you find this repository or our methodology useful for your research, please cite our paper:
 
 ```bibtex
-@inproceedings{madeira2026intent,
-  title={New Intent Discovery in Peer-Review Critiques: A Morphosyntactic Approach for Interpretable Cluster Labeling},
-  author={Madeira, Caio and Dopke, Luan and Losch, Gustavo and Magnaguagno, Mauricio and Griebler, Dalvan},
-  booktitle={Brazilian Conference on Intelligent Systems},
-  year={2026},
-  organization={Springer}
+@InProceedings{10.1007/978-3-032-39898-7_18,
+author="Madeira, Caio
+and Dopke, Luan
+and Losch, Gustavo
+and Magnaguagno, Mauricio
+and Griebler, Dalvan",
+editor="Recamonde-Mendoza, Mariana
+and Barros, Rodrigo C.",
+title="New Intent Discovery in Peer-Review Critiques: A Morphosyntactic Approach for Interpretable Cluster Labeling",
+booktitle="Intelligent Systems",
+year="2027",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="259--273",
+abstract="The academic peer-review process generates a massive volume of unstructured textual feedback that contains highly valuable insights for scientific editorial improvement. While this data holds immense potential for training automated end-to-end revision systems, extracting actionable intents from these reviews remains a profound challenge due to their high semantic diversity and subjective complexity. To bridge this gap, this paper proposes a novel application of New Intent Discovery (NID) techniques for the scientific domain, coupled with an automatic cluster labeling architecture. By evaluating multiple Transformer backbones---SciBERT, BGE, and Specter 2---we extract semantic representations with ARIES and ReAct as input data, and explicitly evaluate the representation degeneration problem through geometric embedding analysis. Finally, to transcend traditional transactional intent discovery, we propose a novel semantic router based on a morphosyntactic analysis and dependency parsing to automatically assign human-interpretable labels to the discovered clusters. Our results demonstrate that this unsupervised approach isolates and labels actionable intents without relying on manual annotations, translating these complex representations into human-interpretable categories, providing a set of foundational suggestion classes and a pipeline that can be incorporated into automated feedback systems for peer-review.",
+isbn="978-3-032-39898-7"
 }
+
+
 ```
 
 Since this work builds upon the algorithmic foundation of USNID, it is mandatory to cite the original methodology authors:
