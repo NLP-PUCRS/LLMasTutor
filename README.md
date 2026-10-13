@@ -17,7 +17,7 @@ This repository contains the code and data pipeline for the unsupervised discove
 ## Cite
 
 If you find this repository or our methodology useful for your research, please cite our paper:
-
+[Paper Link](https://link.springer.com/chapter/10.1007/978-3-032-39898-7_18#citeas)
 ```bibtex
 @InProceedings{10.1007/978-3-032-39898-7_18,
 author="Madeira, Caio
